@@ -4,7 +4,7 @@
 
 **Acknowledgement:** This tool is a significant refactoring and enhancement based on the original [HunyClip by Tr1dae](https://github.com/Tr1dae/HunyClip).
 
-![Screenshot](screenshot.jpg) 
+![VidTrainPrep Workflow](visual.gif) 
 *(Note: Screenshot might be slightly outdated)*
 
 ## Key Features
