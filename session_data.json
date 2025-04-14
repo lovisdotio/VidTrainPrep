@@ -1,0 +1,1194 @@
+{
+    "folder_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS",
+    "video_files": [
+        {
+            "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00001.mp4",
+            "display_name": "video_00001.mp4",
+            "copy_number": 0,
+            "export_enabled": true
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00002.mp4",
+            "display_name": "video_00002.mp4",
+            "copy_number": 0,
+            "export_enabled": false
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00003.mp4",
+            "display_name": "video_00003.mp4",
+            "copy_number": 0,
+            "export_enabled": false
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00004.mp4",
+            "display_name": "video_00004.mp4",
+            "copy_number": 0,
+            "export_enabled": false
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00005.mp4",
+            "display_name": "video_00005.mp4",
+            "copy_number": 0,
+            "export_enabled": false
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00006.mp4",
+            "display_name": "video_00006.mp4",
+            "copy_number": 0,
+            "export_enabled": false
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00007okok.mp4",
+            "display_name": "video_00007okok.mp4",
+            "copy_number": 0,
+            "export_enabled": false
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00008.mp4",
+            "display_name": "video_00008.mp4",
+            "copy_number": 0,
+            "export_enabled": false
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00009okok.mp4",
+            "display_name": "video_00009okok.mp4",
+            "copy_number": 0,
+            "export_enabled": false
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00010okok.mp4",
+            "display_name": "video_00010okok.mp4",
+            "copy_number": 0,
+            "export_enabled": false
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00011.mp4",
+            "display_name": "video_00011.mp4",
+            "copy_number": 0,
+            "export_enabled": false
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00012okok.mp4",
+            "display_name": "video_00012okok.mp4",
+            "copy_number": 0,
+            "export_enabled": false
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00013.mp4",
+            "display_name": "video_00013.mp4",
+            "copy_number": 0,
+            "export_enabled": false
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00014.mp4",
+            "display_name": "video_00014.mp4",
+            "copy_number": 0,
+            "export_enabled": false
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00015.mp4",
+            "display_name": "video_00015.mp4",
+            "copy_number": 0,
+            "export_enabled": false
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00016.mp4",
+            "display_name": "video_00016.mp4",
+            "copy_number": 0,
+            "export_enabled": false
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00017ok.mp4",
+            "display_name": "video_00017ok.mp4",
+            "copy_number": 0,
+            "export_enabled": false
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00018.mp4",
+            "display_name": "video_00018.mp4",
+            "copy_number": 0,
+            "export_enabled": false
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00019ok.mp4",
+            "display_name": "video_00019ok.mp4",
+            "copy_number": 0,
+            "export_enabled": false
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00020.mp4",
+            "display_name": "video_00020.mp4",
+            "copy_number": 0,
+            "export_enabled": false
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00021okok.mp4",
+            "display_name": "video_00021okok.mp4",
+            "copy_number": 0,
+            "export_enabled": false
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00022.mp4",
+            "display_name": "video_00022.mp4",
+            "copy_number": 0,
+            "export_enabled": false
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00023.mp4",
+            "display_name": "video_00023.mp4",
+            "copy_number": 0,
+            "export_enabled": false
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00024.mp4",
+            "display_name": "video_00024.mp4",
+            "copy_number": 0,
+            "export_enabled": false
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00025ok.mp4",
+            "display_name": "video_00025ok.mp4",
+            "copy_number": 0,
+            "export_enabled": false
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00026.mp4",
+            "display_name": "video_00026.mp4",
+            "copy_number": 0,
+            "export_enabled": false
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00027okmiddle.mp4",
+            "display_name": "video_00027okmiddle.mp4",
+            "copy_number": 0,
+            "export_enabled": false
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00028.mp4",
+            "display_name": "video_00028.mp4",
+            "copy_number": 0,
+            "export_enabled": false
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00029ok.mp4",
+            "display_name": "video_00029ok.mp4",
+            "copy_number": 0,
+            "export_enabled": false
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00030.mp4",
+            "display_name": "video_00030.mp4",
+            "copy_number": 0,
+            "export_enabled": false
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00031okok.mp4",
+            "display_name": "video_00031okok.mp4",
+            "copy_number": 0,
+            "export_enabled": false
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00032.mp4",
+            "display_name": "video_00032.mp4",
+            "copy_number": 0,
+            "export_enabled": false
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00033.mp4",
+            "display_name": "video_00033.mp4",
+            "copy_number": 0,
+            "export_enabled": false
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00034.mp4",
+            "display_name": "video_00034.mp4",
+            "copy_number": 0,
+            "export_enabled": false
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00035.mp4",
+            "display_name": "video_00035.mp4",
+            "copy_number": 0,
+            "export_enabled": false
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00036.mp4",
+            "display_name": "video_00036.mp4",
+            "copy_number": 0,
+            "export_enabled": false
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00037.mp4",
+            "display_name": "video_00037.mp4",
+            "copy_number": 0,
+            "export_enabled": false
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00038.mp4",
+            "display_name": "video_00038.mp4",
+            "copy_number": 0,
+            "export_enabled": false
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00039ok.mp4",
+            "display_name": "video_00039ok.mp4",
+            "copy_number": 0,
+            "export_enabled": false
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00040.mp4",
+            "display_name": "video_00040.mp4",
+            "copy_number": 0,
+            "export_enabled": false
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00041.mp4",
+            "display_name": "video_00041.mp4",
+            "copy_number": 0,
+            "export_enabled": false
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00042.mp4",
+            "display_name": "video_00042.mp4",
+            "copy_number": 0,
+            "export_enabled": false
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00043.mp4",
+            "display_name": "video_00043.mp4",
+            "copy_number": 0,
+            "export_enabled": false
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00044.mp4",
+            "display_name": "video_00044.mp4",
+            "copy_number": 0,
+            "export_enabled": false
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00045.mp4",
+            "display_name": "video_00045.mp4",
+            "copy_number": 0,
+            "export_enabled": false
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00046okmdille.mp4",
+            "display_name": "video_00046okmdille.mp4",
+            "copy_number": 0,
+            "export_enabled": false
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00047.mp4",
+            "display_name": "video_00047.mp4",
+            "copy_number": 0,
+            "export_enabled": false
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00048ok.mp4",
+            "display_name": "video_00048ok.mp4",
+            "copy_number": 0,
+            "export_enabled": false
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_0004ok9.mp4",
+            "display_name": "video_0004ok9.mp4",
+            "copy_number": 0,
+            "export_enabled": false
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00050.mp4",
+            "display_name": "video_00050.mp4",
+            "copy_number": 0,
+            "export_enabled": false
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00051.mp4",
+            "display_name": "video_00051.mp4",
+            "copy_number": 0,
+            "export_enabled": false
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00052.mp4",
+            "display_name": "video_00052.mp4",
+            "copy_number": 0,
+            "export_enabled": false
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00053.mp4",
+            "display_name": "video_00053.mp4",
+            "copy_number": 0,
+            "export_enabled": false
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00054.mp4",
+            "display_name": "video_00054.mp4",
+            "copy_number": 0,
+            "export_enabled": false
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00055.mp4",
+            "display_name": "video_00055.mp4",
+            "copy_number": 0,
+            "export_enabled": false
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00056.mp4",
+            "display_name": "video_00056.mp4",
+            "copy_number": 0,
+            "export_enabled": true
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00057ok.mp4",
+            "display_name": "video_00057ok.mp4",
+            "copy_number": 0,
+            "export_enabled": false
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00058.mp4",
+            "display_name": "video_00058.mp4",
+            "copy_number": 0,
+            "export_enabled": false
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00059.mp4",
+            "display_name": "video_00059.mp4",
+            "copy_number": 0,
+            "export_enabled": false
+        }
+    ],
+    "folder_sessions": {
+        "": [],
+        "C:/Users/lovis/Desktop/PROJECT/TO-ORG/RESSOURCE": [],
+        "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS": [
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00001.mp4",
+                "display_name": "video_00001.mp4",
+                "copy_number": 0,
+                "export_enabled": true
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00002.mp4",
+                "display_name": "video_00002.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00003.mp4",
+                "display_name": "video_00003.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00004.mp4",
+                "display_name": "video_00004.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00005.mp4",
+                "display_name": "video_00005.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00006.mp4",
+                "display_name": "video_00006.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00007okok.mp4",
+                "display_name": "video_00007okok.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00008.mp4",
+                "display_name": "video_00008.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00009okok.mp4",
+                "display_name": "video_00009okok.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00010okok.mp4",
+                "display_name": "video_00010okok.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00011.mp4",
+                "display_name": "video_00011.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00012okok.mp4",
+                "display_name": "video_00012okok.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00013.mp4",
+                "display_name": "video_00013.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00014.mp4",
+                "display_name": "video_00014.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00015.mp4",
+                "display_name": "video_00015.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00016.mp4",
+                "display_name": "video_00016.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00017ok.mp4",
+                "display_name": "video_00017ok.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00018.mp4",
+                "display_name": "video_00018.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00019ok.mp4",
+                "display_name": "video_00019ok.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00020.mp4",
+                "display_name": "video_00020.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00021okok.mp4",
+                "display_name": "video_00021okok.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00022.mp4",
+                "display_name": "video_00022.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00023.mp4",
+                "display_name": "video_00023.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00024.mp4",
+                "display_name": "video_00024.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00025ok.mp4",
+                "display_name": "video_00025ok.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00026.mp4",
+                "display_name": "video_00026.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00027okmiddle.mp4",
+                "display_name": "video_00027okmiddle.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00028.mp4",
+                "display_name": "video_00028.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00029ok.mp4",
+                "display_name": "video_00029ok.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00030.mp4",
+                "display_name": "video_00030.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00031okok.mp4",
+                "display_name": "video_00031okok.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00032.mp4",
+                "display_name": "video_00032.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00033.mp4",
+                "display_name": "video_00033.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00034.mp4",
+                "display_name": "video_00034.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00035.mp4",
+                "display_name": "video_00035.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00036.mp4",
+                "display_name": "video_00036.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00037.mp4",
+                "display_name": "video_00037.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00038.mp4",
+                "display_name": "video_00038.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00039ok.mp4",
+                "display_name": "video_00039ok.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00040.mp4",
+                "display_name": "video_00040.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00041.mp4",
+                "display_name": "video_00041.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00042.mp4",
+                "display_name": "video_00042.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00043.mp4",
+                "display_name": "video_00043.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00044.mp4",
+                "display_name": "video_00044.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00045.mp4",
+                "display_name": "video_00045.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00046okmdille.mp4",
+                "display_name": "video_00046okmdille.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00047.mp4",
+                "display_name": "video_00047.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00048ok.mp4",
+                "display_name": "video_00048ok.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_0004ok9.mp4",
+                "display_name": "video_0004ok9.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00050.mp4",
+                "display_name": "video_00050.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00051.mp4",
+                "display_name": "video_00051.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00052.mp4",
+                "display_name": "video_00052.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00053.mp4",
+                "display_name": "video_00053.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00054.mp4",
+                "display_name": "video_00054.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00055.mp4",
+                "display_name": "video_00055.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00056.mp4",
+                "display_name": "video_00056.mp4",
+                "copy_number": 0,
+                "export_enabled": true
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00057ok.mp4",
+                "display_name": "video_00057ok.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00058.mp4",
+                "display_name": "video_00058.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00059.mp4",
+                "display_name": "video_00059.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            }
+        ],
+        "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS": [],
+        "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\converted_16fps": [
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\converted_16fps\\video_00001.mp4",
+                "display_name": "video_00001.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\converted_16fps\\video_00002.mp4",
+                "display_name": "video_00002.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\converted_16fps\\video_00003.mp4",
+                "display_name": "video_00003.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\converted_16fps\\video_00004.mp4",
+                "display_name": "video_00004.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\converted_16fps\\video_00005.mp4",
+                "display_name": "video_00005.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\converted_16fps\\video_00006.mp4",
+                "display_name": "video_00006.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\converted_16fps\\video_00007okok.mp4",
+                "display_name": "video_00007okok.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\converted_16fps\\video_00008.mp4",
+                "display_name": "video_00008.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\converted_16fps\\video_00009okok.mp4",
+                "display_name": "video_00009okok.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\converted_16fps\\video_00010okok.mp4",
+                "display_name": "video_00010okok.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\converted_16fps\\video_00011.mp4",
+                "display_name": "video_00011.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\converted_16fps\\video_00012okok.mp4",
+                "display_name": "video_00012okok.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\converted_16fps\\video_00013.mp4",
+                "display_name": "video_00013.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\converted_16fps\\video_00014.mp4",
+                "display_name": "video_00014.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\converted_16fps\\video_00015.mp4",
+                "display_name": "video_00015.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\converted_16fps\\video_00016.mp4",
+                "display_name": "video_00016.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\converted_16fps\\video_00017ok.mp4",
+                "display_name": "video_00017ok.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\converted_16fps\\video_00018.mp4",
+                "display_name": "video_00018.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\converted_16fps\\video_00019ok.mp4",
+                "display_name": "video_00019ok.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\converted_16fps\\video_00020.mp4",
+                "display_name": "video_00020.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\converted_16fps\\video_00021okok.mp4",
+                "display_name": "video_00021okok.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\converted_16fps\\video_00022.mp4",
+                "display_name": "video_00022.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\converted_16fps\\video_00023.mp4",
+                "display_name": "video_00023.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\converted_16fps\\video_00024.mp4",
+                "display_name": "video_00024.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\converted_16fps\\video_00025ok.mp4",
+                "display_name": "video_00025ok.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\converted_16fps\\video_00026.mp4",
+                "display_name": "video_00026.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\converted_16fps\\video_00027okmiddle.mp4",
+                "display_name": "video_00027okmiddle.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\converted_16fps\\video_00028.mp4",
+                "display_name": "video_00028.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\converted_16fps\\video_00029ok.mp4",
+                "display_name": "video_00029ok.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\converted_16fps\\video_00030.mp4",
+                "display_name": "video_00030.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\converted_16fps\\video_00031okok.mp4",
+                "display_name": "video_00031okok.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\converted_16fps\\video_00032.mp4",
+                "display_name": "video_00032.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\converted_16fps\\video_00033.mp4",
+                "display_name": "video_00033.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\converted_16fps\\video_00034.mp4",
+                "display_name": "video_00034.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\converted_16fps\\video_00035.mp4",
+                "display_name": "video_00035.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\converted_16fps\\video_00036.mp4",
+                "display_name": "video_00036.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\converted_16fps\\video_00037.mp4",
+                "display_name": "video_00037.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\converted_16fps\\video_00038.mp4",
+                "display_name": "video_00038.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\converted_16fps\\video_00039ok.mp4",
+                "display_name": "video_00039ok.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\converted_16fps\\video_00040.mp4",
+                "display_name": "video_00040.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\converted_16fps\\video_00041.mp4",
+                "display_name": "video_00041.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\converted_16fps\\video_00042.mp4",
+                "display_name": "video_00042.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\converted_16fps\\video_00043.mp4",
+                "display_name": "video_00043.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\converted_16fps\\video_00044.mp4",
+                "display_name": "video_00044.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\converted_16fps\\video_00045.mp4",
+                "display_name": "video_00045.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\converted_16fps\\video_00046okmdille.mp4",
+                "display_name": "video_00046okmdille.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\converted_16fps\\video_00047.mp4",
+                "display_name": "video_00047.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\converted_16fps\\video_00048ok.mp4",
+                "display_name": "video_00048ok.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\converted_16fps\\video_0004ok9.mp4",
+                "display_name": "video_0004ok9.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\converted_16fps\\video_00050.mp4",
+                "display_name": "video_00050.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\converted_16fps\\video_00051.mp4",
+                "display_name": "video_00051.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\converted_16fps\\video_00052.mp4",
+                "display_name": "video_00052.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\converted_16fps\\video_00053.mp4",
+                "display_name": "video_00053.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\converted_16fps\\video_00054.mp4",
+                "display_name": "video_00054.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\converted_16fps\\video_00055.mp4",
+                "display_name": "video_00055.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\converted_16fps\\video_00056.mp4",
+                "display_name": "video_00056.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\converted_16fps\\video_00057ok.mp4",
+                "display_name": "video_00057ok.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\converted_16fps\\video_00058.mp4",
+                "display_name": "video_00058.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\converted_16fps\\video_00059.mp4",
+                "display_name": "video_00059.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            }
+        ]
+    },
+    "video_data": {
+        "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00002.mp4": {
+            "ranges": [
+                {
+                    "id": "17df632a-9242-4a45-8f12-92e02fc3c926",
+                    "start": 0,
+                    "end": 60,
+                    "crop": [
+                        429,
+                        72,
+                        725,
+                        514
+                    ],
+                    "index": 1
+                },
+                {
+                    "id": "e27254a3-3f81-411f-b4c5-681c922c4f0b",
+                    "start": 80,
+                    "end": 161,
+                    "crop": [
+                        667,
+                        89,
+                        132,
+                        187
+                    ],
+                    "index": 2
+                },
+                {
+                    "id": "8e8c9575-099a-4694-9719-edf63b527364",
+                    "start": 0,
+                    "end": 60,
+                    "crop": [
+                        385,
+                        129,
+                        809,
+                        380
+                    ],
+                    "index": 3
+                },
+                {
+                    "id": "3a65ed86-6f60-41fa-9e83-0dc27ad41f15",
+                    "start": 87,
+                    "end": 147,
+                    "crop": [
+                        676,
+                        271,
+                        305,
+                        338
+                    ],
+                    "index": 4
+                },
+                {
+                    "id": "3fce29f3-a771-4c1a-8f0e-4d77babc0bf9",
+                    "start": 87,
+                    "end": 147,
+                    "crop": [
+                        436,
+                        0,
+                        647,
+                        503
+                    ],
+                    "index": 5
+                },
+                {
+                    "id": "da2ee847-d6a9-4765-88f8-697807f6b03b",
+                    "start": 0,
+                    "end": 60,
+                    "crop": [
+                        524,
+                        81,
+                        451,
+                        380
+                    ],
+                    "index": 6
+                },
+                {
+                    "id": "8e67f20c-27da-4110-a7ae-5a9ddc631643",
+                    "start": 82,
+                    "end": 142,
+                    "crop": [
+                        434,
+                        51,
+                        535,
+                        389
+                    ],
+                    "index": 7
+                }
+            ]
+        },
+        "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00001.mp4": {
+            "ranges": [
+                {
+                    "id": "8891e5f7-7876-460a-a33a-0965495760bd",
+                    "start": 0,
+                    "end": 60,
+                    "crop": [
+                        210,
+                        210,
+                        725,
+                        389
+                    ],
+                    "index": 1
+                }
+            ]
+        },
+        "C:/Users/lovis/Desktop/JESSEMODEL/GOODJESS/GOODJESS\\video_00022.mp4": {
+            "ranges": [
+                {
+                    "id": "db5b30c6-f777-47db-ac9a-c718117f438e",
+                    "start": 0,
+                    "end": 60,
+                    "crop": null,
+                    "index": 1
+                }
+            ]
+        }
+    },
+    "longest_edge": 1024
+}

@@ -1,0 +1,177 @@
+/* dark_mode.css - Monochrome Dark Theme */
+QWidget {
+    background-color: #2B2B2B; /* Slightly darker base */
+    color: #E0E0E0; /* Light gray text */
+    font-family: 'Segoe UI', sans-serif; /* Fallback font */
+    font-size: 13px; /* Slightly smaller font */
+    border: none; /* Remove default borders */
+}
+
+QPushButton {
+    background-color: #4A4A4A; /* Medium-dark gray */
+    color: #E0E0E0;
+    border: 1px solid #555555; /* Subtle border */
+    border-radius: 4px; /* Slightly smaller radius */
+    padding: 6px 10px; /* Adjust padding */
+    min-height: 1.5em; /* Ensure minimum height */
+}
+
+QPushButton:hover {
+    background-color: #555555; /* Lighter gray on hover */
+    border: 1px solid #666666;
+}
+
+QPushButton:pressed {
+    background-color: #606060; /* Even lighter gray when pressed */
+    border: 1px solid #777777;
+}
+
+QPushButton:disabled {
+    background-color: #404040;
+    color: #888888;
+    border: 1px solid #4A4A4A;
+}
+
+QListWidget {
+    background-color: #3C3C3C; /* Darker gray for lists */
+    color: #E0E0E0;
+    border: 1px solid #555555;
+    border-radius: 4px;
+    outline: 0; /* Remove focus outline */
+}
+
+QListWidget::item {
+    padding: 4px 2px; /* Spacing for items */
+}
+
+QListWidget::item:selected {
+    background-color: #5A5A5A; /* Gray selection color */
+    color: #FFFFFF; /* White text for selected item */
+    outline: 0;
+}
+
+QSlider::groove:horizontal {
+    background-color: #3C3C3C;
+    height: 6px; /* Thinner groove */
+    border-radius: 3px;
+    border: 1px solid #555555;
+}
+
+QSlider::handle:horizontal {
+    background-color: #C0C0C0; /* Light gray handle */
+    width: 16px;
+    height: 16px;
+    margin: -6px 0; /* Adjust margin for thinner groove */
+    border-radius: 8px;
+    border: 1px solid #555555;
+}
+
+QLabel {
+    color: #E0E0E0;
+    background-color: transparent; /* Ensure labels have transparent background */
+}
+
+QLineEdit, QSpinBox {
+    background-color: #3C3C3C;
+    color: #E0E0E0;
+    border: 1px solid #555555;
+    border-radius: 4px;
+    padding: 5px;
+    min-height: 1.5em;
+}
+
+QLineEdit:read-only {
+    background-color: #484848; /* Slightly different bg for read-only */
+    color: #AAAAAA;
+}
+
+QSpinBox::up-button, QSpinBox::down-button {
+    /* Optional: Style spin box buttons if desired */
+    /* Example: make them smaller/flatter */
+    /* subcontrol-origin: border; */
+    /* width: 14px; */
+    /* border-left: 1px solid #555555; */
+    background-color: #4A4A4A;
+}
+
+QSpinBox::up-arrow, QSpinBox::down-arrow {
+   /* Optional: change arrow color/style */
+    color: #E0E0E0;
+    width: 7px;
+    height: 7px;
+}
+
+QCheckBox {
+    color: #E0E0E0;
+    spacing: 5px; /* Space between box and text */
+}
+
+QCheckBox::indicator {
+    width: 14px;
+    height: 14px;
+    border: 1px solid #555555;
+    border-radius: 3px;
+    background-color: #3C3C3C;
+}
+
+QCheckBox::indicator:checked {
+    /* background-color: #5A5A5A; */ 
+    /* background-color: #B0B0B0; */ /* Revert background change */
+    /* border: 1px solid #FFFFFF; */ /* Revert border change */
+    /* Use the provided PNG image */
+    image: url(icons/checkmark.png);
+}
+
+QComboBox {
+    background-color: #4A4A4A;
+    border: 1px solid #555555;
+    border-radius: 4px;
+    padding: 1px 18px 1px 3px; /* Adjust padding */
+    min-width: 6em;
+    color: #E0E0E0;
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 15px;
+    border-left-width: 1px;
+    border-left-color: #555555;
+    border-left-style: solid;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+QComboBox::down-arrow {
+    /* image: url(icons/down_arrow.svg); */ /* Needs an icon file - REMOVED */
+    width: 10px;
+    height: 10px;
+}
+
+QComboBox QAbstractItemView { /* Dropdown list style */
+    background-color: #3C3C3C;
+    border: 1px solid #555555;
+    selection-background-color: #5A5A5A;
+    color: #E0E0E0;
+    outline: 0;
+}
+
+QGraphicsView {
+    background-color: #202020; /* Even darker background for video area */
+    border: 1px solid #555555;
+    border-radius: 4px;
+}
+
+/* Style for the specific range list */
+QListWidget#clip_range_list {
+     /* Could add specific styles here if needed */
+     /* Example: different selection color */
+     /* selection-background-color: #6A6A6A; */
+}
+
+/* Specific label styling if needed */
+QLabel#clip_length_label {
+     font-size: 12px;
+     color: #B0B0B0; /* Slightly dimmer */
+     padding-left: 5px;
+}
