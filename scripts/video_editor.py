@@ -1,5 +1,5 @@
 # video_editor.py
-import cv2
+import cv2, time
 from PyQt6.QtGui import QImage, QPixmap, QPainter, QColor, QPen
 from PyQt6.QtCore import Qt, QTimer, QRectF
 from scripts.interactive_crop_region import InteractiveCropRegion  # New interactive crop region
@@ -12,6 +12,8 @@ class VideoEditor:
         # Add state flag for range playback
         self.is_playing_range = False
         self.current_range_end_frame = -1 # Store end frame for range playback
+        # NEW: Add fps cache to avoid repeated cap.get calls
+        self.current_fps = 0.0
 
     def load_video_properties(self, video_path):
         """Opens video, gets properties, displays first frame. Returns True on success."""
@@ -21,18 +23,23 @@ class VideoEditor:
             self.main_app.cap = cv2.VideoCapture(video_path)
             if not self.main_app.cap.isOpened():
                 print(f"Error: Could not open video file: {video_path}")
-                self.main_app.cap = None # Ensure cap is None on failure
+                self.main_app.cap = None
+                self.current_fps = 0.0 # Reset FPS cache
                 return False
                 
             self.main_app.frame_count = int(self.main_app.cap.get(cv2.CAP_PROP_FRAME_COUNT))
             self.main_app.original_width = int(self.main_app.cap.get(cv2.CAP_PROP_FRAME_WIDTH))
             self.main_app.original_height = int(self.main_app.cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
-            # self.main_app.clip_aspect_ratio = self.main_app.original_width / self.main_app.original_height # Aspect ratio handled elsewhere
+            self.current_fps = self.main_app.cap.get(cv2.CAP_PROP_FPS) # Cache FPS
+            if self.current_fps <= 0:
+                print("Warning: Could not determine video FPS. Using fallback 30.")
+                self.current_fps = 30.0 # Fallback FPS
             
             if self.main_app.frame_count <= 0:
                  print(f"Warning: Video has {self.main_app.frame_count} frames. Cannot process.")
                  self.main_app.cap.release()
                  self.main_app.cap = None
+                 self.current_fps = 0.0
                  return False
                  
             # Set slider range and enable
@@ -40,7 +47,7 @@ class VideoEditor:
             self.main_app.slider.setEnabled(True)
             self.main_app.slider.setValue(0) # Start slider at 0
             
-            # Display the first frame
+            # Display the first frame (this now updates the label too)
             return self.update_frame_display(0)
 
         except Exception as e:
@@ -48,36 +55,49 @@ class VideoEditor:
             if self.main_app.cap:
                  self.main_app.cap.release()
             self.main_app.cap = None
+            self.current_fps = 0.0
             return False
 
     def update_frame_display(self, frame_number):
-        """Sets capture to specific frame and displays it."""
+        """Sets capture to specific frame, displays it, and updates the frame label."""
         if not self.main_app.cap or not self.main_app.cap.isOpened():
              print("⚠️ Cannot update display: Video capture not ready.")
+             # Update label to show error/unknown state?
+             # self.main_app.update_current_frame_label(-1, self.main_app.frame_count, self.current_fps)
              return False
-             
-        if frame_number < 0 or frame_number >= self.main_app.frame_count:
-             print(f"⚠️ Cannot update display: Frame {frame_number} out of bounds (0-{self.main_app.frame_count-1}).")
-             # Optionally clamp frame_number or just return False
-             frame_number = max(0, min(frame_number, self.main_app.frame_count - 1))
-             # return False 
+
+        # Clamp frame number
+        frame_number = int(round(frame_number)) # Ensure integer
+        frame_number = max(0, min(frame_number, self.main_app.frame_count - 1))
 
         try:
-            # Setting position and reading can be slow/inaccurate sometimes, grabbing helps?
-            self.main_app.cap.set(cv2.CAP_PROP_POS_FRAMES, frame_number)
-            # for _ in range(2): # Optional grab frames
-            #      self.main_app.cap.grab()
+            # Check if we are already at the desired frame (avoids unnecessary seek)
+            # Note: CAP_PROP_POS_FRAMES gives the *next* frame index
+            current_pos = int(self.main_app.cap.get(cv2.CAP_PROP_POS_FRAMES))
+            # If seeking to the same frame or the frame just read, don't seek again
+            if current_pos == frame_number + 1 or current_pos == frame_number:
+                 # Read might still be needed if we only seeked but didn't read
+                 pass # We might need to read anyway
+            else:
+                self.main_app.cap.set(cv2.CAP_PROP_POS_FRAMES, frame_number)
+
             ret, frame = self.main_app.cap.read()
             if ret:
                 self.display_frame(frame)
-                # Update slider if needed (e.g., if called not by slider itself)
-                if self.main_app.slider.value() != frame_number:
-                     self.main_app.slider.setValue(frame_number)                     
+
+                # Update slider if its value doesn't match (avoiding loops)
+                # Block signals temporarily to prevent slider.valueChanged triggering this again
+                self.main_app.slider.blockSignals(True)
+                self.main_app.slider.setValue(frame_number)
+                self.main_app.slider.blockSignals(False)
+
+                # Update the current frame label in the main app
+                self.main_app.update_current_frame_label(frame_number, self.main_app.frame_count, self.current_fps)
                 return True
             else:
                 print(f"Error: Could not read frame {frame_number}.")
-                 # Attempt to reread from beginning if read fails?
-                 # self.main_app.cap.set(cv2.CAP_PROP_POS_FRAMES, 0)
+                # Update label to show error state?
+                # self.main_app.update_current_frame_label(frame_number, self.main_app.frame_count, self.current_fps) # Show last attempted frame
                 return False
         except Exception as e:
              print(f"Error updating frame display for frame {frame_number}: {e}")
@@ -116,11 +136,13 @@ class VideoEditor:
             print(f"Error displaying frame: {e}")
 
     def scrub_video(self, position):
-        """Called when slider is moved interactively."""
+        """Called when slider is moved interactively OR value changes."""
         if self.main_app.cap:
-            # Just update the frame display based on slider position
+            # Stop any playback when scrubbing starts
+            if self.playback_timer.isActive():
+                self.stop_playback()
+            # Update the frame display based on slider position
             self.update_frame_display(position)
-            # No need to update trim points here anymore
 
     def show_thumbnail(self, event):
         # This logic seems okay, but relies on accurate frame seeking
@@ -265,77 +287,95 @@ class VideoEditor:
             # End frame remains the total frame count
 
         print(f"Starting {playback_mode_msg} playback from {self.current_playback_start_frame} to {self.current_playback_end_frame}")
+        # Set initial frame correctly
+        initial_seek_frame = self.current_playback_start_frame
+
+        # Seek and update display/label for the starting frame
+        print(f"Seeking to start frame {initial_seek_frame} for playback...")
+        # update_frame_display handles seek, display, slider, and label update
+        if not self.update_frame_display(initial_seek_frame):
+            print(f"Error seeking to start frame {initial_seek_frame}. Aborting playback.")
+            self.stop_playback()
+            return
+
         # Use a timer for smoother playback
-        fps = self.main_app.cap.get(cv2.CAP_PROP_FPS)
-        interval = int(1000 / fps) if fps > 0 else 33 # Default to ~30fps
+        interval = int(1000 / self.current_fps) if self.current_fps > 0 else 33
         self.playback_timer.start(interval)
-        self._playback_step() # Process first frame immediately
+        # Don't call _playback_step immediately, the timer will trigger it.
 
     def _playback_step(self):
         """Reads and displays the next frame during playback."""
-        # Check if any playback mode is active
         is_active = self.main_app.is_playing or self.main_app.loop_playback or self.is_playing_range
         if not self.main_app.cap or not self.main_app.cap.isOpened() or not is_active:
-            self.stop_playback() # Ensure timer stops if state is inconsistent
+            self.stop_playback()
             return
 
+        # Get position *before* reading
         current_frame_pos = int(self.main_app.cap.get(cv2.CAP_PROP_POS_FRAMES))
 
-        # --- Check End Conditions --- 
-        # 1. Range Playback End
+        # --- Check End Conditions ---
         if self.is_playing_range and current_frame_pos >= self.current_range_end_frame:
              print("Range playback finished.")
              self.stop_playback()
-             # Optionally seek back to start of range after stopping?
-             # self.update_frame_display(self.current_playback_start_frame)
+             # Go back to start of range after stopping?
+             self.update_frame_display(self.current_playback_start_frame)
              return
-             
-        # 2. Loop Playback Restart
+
         elif self.main_app.loop_playback and current_frame_pos >= self.current_playback_end_frame:
             print("Looping back to start...")
             start_seek = self.current_playback_start_frame
             self.main_app.cap.set(cv2.CAP_PROP_POS_FRAMES, start_seek)
             current_frame_pos = start_seek # Update position for read check below
-            self.main_app.slider.setValue(current_frame_pos)
-            
-        # 3. Normal Playback End
+            # No need to update slider/label here, the read below will handle it
+
         elif self.main_app.is_playing and current_frame_pos >= self.current_playback_end_frame:
             print("Normal playback finished.")
             self.stop_playback()
+            # Update label to show the last frame?
+            # self.main_app.update_current_frame_label(self.main_app.frame_count - 1, self.main_app.frame_count, self.current_fps)
             return
-            
-        # --- Read and Display Frame --- 
+
+        # --- Read and Display Frame ---
         ret, frame = self.main_app.cap.read()
         if ret and frame is not None:
-            # Update slider to reflect actual read position (before display)
-            # POS_FRAMES gives the index of the *next* frame to be decoded, so current is pos-1
-            actual_pos = max(0, current_frame_pos - 1) 
-            self.main_app.slider.setValue(actual_pos)
+            # Calculate the frame index that was just *read*
+            actual_read_frame = current_frame_pos # Since POS_FRAMES is next index before read
+            if actual_read_frame >= self.main_app.frame_count: # Handle potential off-by-one at end
+                actual_read_frame = self.main_app.frame_count - 1
+
+            # Display frame first
             self.display_frame(frame)
+
+            # Update slider (block signals)
+            self.main_app.slider.blockSignals(True)
+            self.main_app.slider.setValue(actual_read_frame)
+            self.main_app.slider.blockSignals(False)
+
+            # Update label
+            self.main_app.update_current_frame_label(actual_read_frame, self.main_app.frame_count, self.current_fps)
+
         else:
             print("End of stream or read error during playback.")
             self.stop_playback()
+            # Update label to show the last successfully read frame?
+            last_known_frame = current_frame_pos -1 if current_frame_pos > 0 else 0
+            last_known_frame = max(0, min(last_known_frame, self.main_app.frame_count - 1))
+            self.main_app.update_current_frame_label(last_known_frame, self.main_app.frame_count, self.current_fps)
 
     def stop_playback(self):
         """Stops any active playback timer and resets flags."""
-        if self.playback_timer.isActive():
+        was_active = self.playback_timer.isActive()
+        if was_active:
             self.playback_timer.stop()
             print("Playback timer stopped.")
-            
-        was_playing = self.main_app.is_playing or self.main_app.loop_playback or self.is_playing_range
-            
+
+        # Reset flags regardless of timer state
         self.main_app.is_playing = False
         self.main_app.loop_playback = False
         self.is_playing_range = False
         self.current_range_end_frame = -1
-        
-        if was_playing:
-             print("Playback stopped.")
-        # Optionally reset frame to start of selected range after stopping?
-        # if self.main_app.cap and self.main_app.current_selected_range_id:
-        #     range_data = self.main_app.find_range_by_id(self.main_app.current_selected_range_id)
-        #     if range_data:
-        #         self.update_frame_display(range_data['start'])
+
+        # No need to update label here usually, last frame display should be correct
 
     def next_clip(self):
         # This should advance the main video list selection
@@ -360,3 +400,43 @@ class VideoEditor:
                  print("Already at the first video.")
         else: # Next video
              self.next_clip()
+
+    # --- NEW Frame Navigation Methods ---
+
+    def step_frame(self, delta):
+        """Steps forward or backward by a specific number of frames (delta)."""
+        if not self.main_app.cap or not self.main_app.slider.isEnabled():
+            return
+        if self.playback_timer.isActive(): # Stop playback if active
+            self.stop_playback()
+
+        current_frame = self.main_app.slider.value()
+        target_frame = current_frame + delta
+        # Clamping happens inside update_frame_display
+        self.update_frame_display(target_frame)
+
+    def jump_frames(self, delta_seconds):
+        """Jumps forward or backward by a number of seconds."""
+        if not self.main_app.cap or not self.main_app.slider.isEnabled() or self.current_fps <= 0:
+            return
+        if self.playback_timer.isActive(): # Stop playback if active
+            self.stop_playback()
+
+        frame_delta = int(round(delta_seconds * self.current_fps))
+        if frame_delta == 0: # If jump is less than one frame, step at least one
+             frame_delta = 1 if delta_seconds > 0 else -1
+
+        current_frame = self.main_app.slider.value()
+        target_frame = current_frame + frame_delta
+        # Clamping happens inside update_frame_display
+        self.update_frame_display(target_frame)
+
+    def goto_frame(self, frame_number):
+        """Jumps directly to a specific frame number."""
+        if not self.main_app.cap or not self.main_app.slider.isEnabled():
+            return
+        if self.playback_timer.isActive(): # Stop playback if active
+            self.stop_playback()
+
+        # Clamping happens inside update_frame_display
+        self.update_frame_display(frame_number)
