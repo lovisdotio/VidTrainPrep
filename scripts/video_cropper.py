@@ -4,7 +4,8 @@ from scripts.custom_graphics_view import CustomGraphicsView
 from PyQt6.QtWidgets import (
     QApplication, QWidget, QFileDialog, QLabel, QPushButton, QVBoxLayout, QHBoxLayout,
     QListWidget, QSlider, QGraphicsPixmapItem, QLineEdit, QSpinBox,
-    QSizePolicy, QCheckBox, QListWidgetItem, QComboBox, QMessageBox, QDialog, QFormLayout, QDialogButtonBox
+    QSizePolicy, QCheckBox, QListWidgetItem, QComboBox, QMessageBox, QDialog, QFormLayout, QDialogButtonBox,
+    QSpacerItem # Added QSpacerItem
 )
 from PyQt6.QtGui import QPixmap, QImage, QPainter, QColor, QPen, QIcon, QMouseEvent, QIntValidator
 from PyQt6.QtCore import Qt, QTimer, QRectF
@@ -77,6 +78,8 @@ class VideoCropper(QWidget):
         self.loader.load_session() # Will need modification later
         
         self.initUI()
+        # Initialize frame label text after UI is built
+        self.update_current_frame_label(0, 0, 0) # Show initial state
     
     def initUI(self):
         main_layout = QHBoxLayout(self)
@@ -146,7 +149,7 @@ class VideoCropper(QWidget):
         self.remove_range_button = QPushButton("Remove Range")
         self.remove_range_button.clicked.connect(self.remove_selected_range) # New method needed
         range_button_layout.addWidget(self.remove_range_button)
-        self.play_range_button = QPushButton("Play Range") # New Button
+        self.play_range_button = QPushButton("Preview Range (Z)") # New Button
         self.play_range_button.clicked.connect(self.toggle_play_selected_range) # New method
         range_button_layout.addWidget(self.play_range_button)
         range_layout.addLayout(range_button_layout)
@@ -207,7 +210,7 @@ class VideoCropper(QWidget):
         
         # RIGHT PANEL
         right_panel = QVBoxLayout()
-        keybindings_label = QLabel("Click & Drag: Crop selected range | Z: Preview Range | X: Next Video | C: Play/Pause | Q/W: Nudge End Frame | A/S: Nudge Start Frame") # Updated shortcuts
+        keybindings_label = QLabel("Left/Right: Prev/Next Frame | Shift+Left/Right: Prev/Next Second | Drag: Crop | Z: Preview Range | X: Next Video | C: Play/Pause | Q/W: Nudge End | A/S: Nudge Start") # Updated shortcuts
         keybindings_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
         keybindings_label.setStyleSheet("font-size: 11px; color: #ECEFF4;") # Smaller font
         right_panel.addWidget(keybindings_label)
@@ -235,6 +238,7 @@ class VideoCropper(QWidget):
         self.slider = QSlider(Qt.Orientation.Horizontal)
         self.slider.setEnabled(False)
         self.slider.sliderMoved.connect(self.editor.scrub_video)
+        self.slider.valueChanged.connect(self.editor.scrub_video)
         right_panel.addWidget(self.slider)
         
         self.clip_length_label = QLabel("Clip Length: 0 frames | Video Length: 0 frames") # Show clip and total length
@@ -250,23 +254,39 @@ class VideoCropper(QWidget):
         
         self.slider.installEventFilter(self)
         
-        # Export settings layout (Filename, Prefix, Trigger Word) - Keep as is
-        # export_settings_layout = QHBoxLayout()
-        # self.resolution_input = QLineEdit()
-        # self.resolution_input.setPlaceholderText("Set longest edge (default 1024)")
-        # self.resolution_input.textChanged.connect(self.set_longest_edge)
-        # export_settings_layout.addWidget(self.resolution_input)
-        # self.prefix_input = QLineEdit()
-        # self.prefix_input.setPlaceholderText("Filename Replacement (Optional)")
-        # self.prefix_input.textChanged.connect(lambda text: setattr(self, "export_prefix", text))
-        # export_settings_layout.addWidget(self.prefix_input)
-        # self.trigger_word_input = QLineEdit()
-        # self.trigger_word_input.setPlaceholderText("Trigger Word (Optional, prepended to captions)")
-        # export_settings_layout.addWidget(self.trigger_word_input)
-        # self.character_name_input = QLineEdit()
-        # self.character_name_input.setPlaceholderText("Character Name (Optional, for Gemini)")
-        # export_settings_layout.addWidget(self.character_name_input)
-        # right_panel.addLayout(export_settings_layout)
+        # --- NEW: Frame Control Layout ---
+        frame_control_layout = QHBoxLayout()
+
+        # Prev Frame Button
+        self.step_backward_button = QPushButton("< Frame")
+        self.step_backward_button.setToolTip("Go to Previous Frame (Shortcut: Left Arrow)")
+        self.step_backward_button.clicked.connect(self._step_frame_backward)
+        self.step_backward_button.setFixedWidth(80) # Optional fixed width
+        frame_control_layout.addWidget(self.step_backward_button)
+
+        # Current Frame Label (NEW) - Give it expanding space
+        self.current_frame_label = QLabel("Frame: - / -")
+        self.current_frame_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.current_frame_label.setStyleSheet("font-size: 12px; color: #C0C0C0;") # Style
+        frame_control_layout.addWidget(self.current_frame_label, 1) # Expanding
+
+        # Next Frame Button
+        self.step_forward_button = QPushButton("Frame >")
+        self.step_forward_button.setToolTip("Go to Next Frame (Shortcut: Right Arrow)")
+        self.step_forward_button.clicked.connect(self._step_frame_forward)
+        self.step_forward_button.setFixedWidth(80) # Optional fixed width
+        frame_control_layout.addWidget(self.step_forward_button)
+
+        # Go to Frame Input
+        frame_control_layout.addWidget(QLabel(" Go to Frame:"))
+        self.goto_frame_input = QLineEdit()
+        self.goto_frame_input.setFixedWidth(70) # Optional fixed width
+        self.goto_frame_input.setValidator(QIntValidator(0, 9999999)) # Allow large frame numbers
+        self.goto_frame_input.setToolTip("Enter frame number and press Enter")
+        self.goto_frame_input.returnPressed.connect(self._goto_frame) # Connect return key
+        frame_control_layout.addWidget(self.goto_frame_input)
+
+        right_panel.addLayout(frame_control_layout) # Add this layout below the slider
 
         # --- Reorganized Export Settings & Gemini Inputs (Vertical) ---
         export_options_group = QWidget()
@@ -450,49 +470,139 @@ class VideoCropper(QWidget):
 
     def keyPressEvent(self, event):
         key = event.key()
-        if key == Qt.Key.Key_Z:
-            # Preview selected range
-            self.editor.toggle_loop_playback() # toggle_loop_playback needs update
-        elif key == Qt.Key.Key_X:
-            self.editor.next_clip() # next_clip likely means next video in main list
-        elif key == Qt.Key.Key_C:
-            # Play/pause normally, or within selected range? Assume normal for now.
-            self.editor.toggle_play_forward() # toggle_play_forward might need update
+        modifiers = event.modifiers()
+
+        # Focus check: Only handle frame keys if graphics view or slider has focus?
+        # Or allow always? Let's allow always for now.
+        # focused_widget = QApplication.focusWidget()
+        # allow_frame_nav = focused_widget is self.graphics_view or focused_widget is self.slider
+
+        if key == Qt.Key.Key_Right: # Frame Forward / Jump Forward
+            if self.slider.isEnabled(): # Only if video loaded
+                if modifiers == Qt.KeyboardModifier.ShiftModifier:
+                    self.editor.jump_frames(1.0) # Jump 1 second forward
+                else:
+                    self.editor.step_frame(1) # Step 1 frame forward
+                event.accept()
+            else:
+                super().keyPressEvent(event)
+        elif key == Qt.Key.Key_Left: # Frame Backward / Jump Backward
+             if self.slider.isEnabled(): # Only if video loaded
+                if modifiers == Qt.KeyboardModifier.ShiftModifier:
+                    self.editor.jump_frames(-1.0) # Jump 1 second backward
+                else:
+                    self.editor.step_frame(-1) # Step 1 frame backward
+                event.accept()
+             else:
+                super().keyPressEvent(event)
+
+        elif key == Qt.Key.Key_Z: # Preview selected range
+            # No change needed, handled by button connection now, but keep shortcut
+            self.editor.toggle_loop_playback()
+            event.accept()
+        elif key == Qt.Key.Key_X: # Next Video
+            self.editor.next_clip()
+            event.accept()
+        elif key == Qt.Key.Key_C: # Play/Pause Normal
+             if self.slider.isEnabled():
+                self.editor.toggle_play_forward()
+                event.accept()
+             else:
+                 super().keyPressEvent(event)
         elif key == Qt.Key.Key_Q: # Nudge End Frame Left
-            self.nudge_end_frame(-1)
+            if self.current_selected_range_id:
+                self.nudge_end_frame(-1)
+                event.accept()
+            else:
+                super().keyPressEvent(event)
         elif key == Qt.Key.Key_W: # Nudge End Frame Right
-            self.nudge_end_frame(1)
+            if self.current_selected_range_id:
+                self.nudge_end_frame(1)
+                event.accept()
+            else:
+                super().keyPressEvent(event)
         elif key == Qt.Key.Key_A: # Nudge Start Frame Left
-            self.nudge_start_frame(-1)
+            # This needs adjustment to update duration correctly when start moves
+            if self.current_selected_range_id:
+                self.nudge_start_frame(-1)
+                event.accept()
+            else:
+                super().keyPressEvent(event)
         elif key == Qt.Key.Key_S: # Nudge Start Frame Right
-            self.nudge_start_frame(1)
+             # This needs adjustment to update duration correctly when start moves
+             if self.current_selected_range_id:
+                self.nudge_start_frame(1)
+                event.accept()
+             else:
+                super().keyPressEvent(event)
         elif key == Qt.Key.Key_Delete or key == Qt.Key.Key_Backspace:
-            # Maybe delete selected range? Check focus first.
-            if self.clip_range_list.hasFocus():
+            # Delete selected range if range list has focus
+            if self.clip_range_list.hasFocus() and self.current_selected_range_id:
                 self.remove_selected_range()
+                event.accept()
+            else:
+                super().keyPressEvent(event)
         else:
             super().keyPressEvent(event)
 
     def nudge_start_frame(self, delta):
         if not self.current_selected_range_id: return
+        range_data = self.find_range_by_id(self.current_selected_range_id)
+        if not range_data: return
+
         try:
-            current_start = int(self.start_frame_input.text())
+            current_start = range_data.get("start", 0)
+            current_end = range_data.get("end", 0)
+            current_duration = current_end - current_start
+
             new_start = max(0, current_start + delta)
-            end_frame = int(self.duration_input.text())
-            if new_start < end_frame: # Ensure start < end
-                self.start_frame_input.setText(str(new_start))
-                self.update_range_duration_from_input() # Trigger update
-        except ValueError: pass
+
+            # Calculate new end based on original duration, then clamp
+            new_end = new_start + current_duration
+            new_end = min(new_end, self.frame_count) # Clamp end to video length
+
+            # Ensure start is still less than (clamped) end
+            if new_start >= new_end:
+                 print("Nudge start failed: Start frame reached or exceeded end frame.")
+                 # Optionally revert or just do nothing
+                 return
+
+            # Update data structure
+            range_data["start"] = new_start
+            range_data["end"] = new_end # End also changes to maintain duration
+
+            # Update UI Input Fields
+            self.start_frame_input.setText(str(new_start))
+            new_duration = new_end - new_start
+            self.duration_input.setText(str(new_duration)) # Update duration display
+
+            # Update list item text
+            current_item = self.clip_range_list.currentItem()
+            if current_item:
+                self._update_list_item_text(current_item, range_data)
+
+            # Update frame display and slider to the new start
+            self.editor.update_frame_display(new_start)
+
+            print(f"Nudged start for {self.current_selected_range_id}: New Range [{new_start}-{new_end}]")
+
+        except ValueError: pass # Ignore if inputs are somehow invalid
 
     def nudge_end_frame(self, delta):
+        # This function is simpler as it just changes duration
         if not self.current_selected_range_id: return
         try:
-            current_end = int(self.duration_input.text())
-            new_end = max(0, current_end + delta)
-            start_frame = int(self.start_frame_input.text())
-            if new_end > start_frame: # Ensure end > start
-                self.duration_input.setText(str(new_end))
-                self.update_range_duration_from_input() # Trigger update
+            # Get current duration from input
+            current_duration = int(self.duration_input.text())
+            new_duration = max(1, current_duration + delta) # Ensure duration is at least 1
+
+            # Update the duration input
+            self.duration_input.setText(str(new_duration))
+
+            # Trigger the update logic (which clamps end frame etc.)
+            self.update_range_duration_from_input()
+            print(f"Nudged end for {self.current_selected_range_id}: New Duration {new_duration}")
+
         except ValueError: pass
 
     def eventFilter(self, source, event):
@@ -515,7 +625,7 @@ class VideoCropper(QWidget):
             self.start_frame_input.setText("-") # Indicate no selection
             self.duration_input.setText("-")
             self.clear_crop_region_controller()
-            self.clip_length_label.setText("Clip Length: 0 frames | Video Length: ...")
+            if hasattr(self, 'goto_frame_input'): self.goto_frame_input.clear() # Clear goto input
             return
             
         range_id = item.data(Qt.ItemDataRole.UserRole)
@@ -534,13 +644,18 @@ class VideoCropper(QWidget):
             duration = end_frame - start_frame
             self.duration_input.setText(str(duration))
             self._load_range_crop(range_data) # Load visual crop
-            # Update slider position to start frame?
             if self.frame_count > 0:
-                self.slider.setValue(int((start_frame / self.frame_count) * self.slider.maximum()))
-                self.editor.update_frame_display(start_frame) # Show the start frame in viewer
-            # Update label
-            range_len = end_frame - start_frame
-            self.clip_length_label.setText(f"Clip Length: {range_len} frames | Video Length: {self.frame_count} frames")
+                 # Update frame display first
+                 self.editor.update_frame_display(start_frame)
+                 # Update slider value (may trigger scrub_video again, but should be ok)
+                 self.slider.setValue(start_frame)
+            # Update label (using the new method directly)
+            fps = self.cap.get(cv2.CAP_PROP_FPS) if self.cap else 0
+            # self.update_current_frame_label(start_frame, self.frame_count, fps) # update_frame_display handles this
+
+            # Clear goto input when selecting a range
+            if hasattr(self, 'goto_frame_input'): self.goto_frame_input.clear()
+
         else:
             print(f"⚠️ Could not find data for range ID: {range_id}")
             self.current_selected_range_id = None
@@ -548,6 +663,7 @@ class VideoCropper(QWidget):
             self.start_frame_input.setText("0")
             self.duration_input.setText("60") # Default duration
             self.clear_crop_region_controller()
+            if hasattr(self, 'goto_frame_input'): self.goto_frame_input.clear() # Clear goto input
 
     def update_range_duration_from_input(self): # Renamed method
         if not self.current_selected_range_id:
@@ -815,6 +931,47 @@ class VideoCropper(QWidget):
                     QMessageBox.critical(self, "Conversion Failed", "FPS conversion failed. Check console for details.")
             else:
                  print("Conversion cancelled or invalid values.")
+
+    # --- Helper to format timecodes ---
+    def _format_timecode(self, frame_number, fps):
+        if fps <= 0:
+            return "--:--:--.---"
+        total_seconds = frame_number / fps
+        hours = int(total_seconds // 3600)
+        minutes = int((total_seconds % 3600) // 60)
+        seconds = int(total_seconds % 60)
+        milliseconds = int((total_seconds - int(total_seconds)) * 1000)
+        if hours > 0:
+            return f"{hours:02d}:{minutes:02d}:{seconds:02d}.{milliseconds:03d}"
+        else:
+            return f"{minutes:02d}:{seconds:02d}.{milliseconds:03d}"
+
+    # --- Method to update the current frame label ---
+    def update_current_frame_label(self, current_frame, total_frames, fps):
+        if not hasattr(self, 'current_frame_label'): # Check if UI is initialized
+             return
+        current_tc = self._format_timecode(current_frame, fps)
+        total_tc = self._format_timecode(total_frames, fps)
+        if total_frames > 0:
+            self.current_frame_label.setText(f"Frame: {current_frame} / {total_frames - 1}   ({current_tc} / {total_tc})")
+        else:
+            self.current_frame_label.setText("Frame: - / -   (--:--:--.-- / --:--:--.--)")
+
+    # --- Slot Methods for New Frame Controls ---
+    def _step_frame_backward(self):
+        self.editor.step_frame(-1)
+
+    def _step_frame_forward(self):
+        self.editor.step_frame(1)
+
+    def _goto_frame(self):
+        try:
+            target_frame = int(self.goto_frame_input.text())
+            self.editor.goto_frame(target_frame)
+        except ValueError:
+            print("Invalid frame number entered.")
+            # Optionally clear the input or show a brief message
+            self.goto_frame_input.clear()
 
 # --- FPS Conversion Dialog --- 
 class ConvertFpsDialog(QDialog):
