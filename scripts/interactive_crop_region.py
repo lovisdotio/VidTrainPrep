@@ -14,6 +14,7 @@ class InteractiveCropRegion(QGraphicsRectItem):
         """
         super().__init__(rect, parent)
         self.aspect_ratio = aspect_ratio
+        
         self.setFlags(
             QGraphicsRectItem.GraphicsItemFlag.ItemIsSelectable |
             QGraphicsRectItem.GraphicsItemFlag.ItemIsMovable |
@@ -22,6 +23,7 @@ class InteractiveCropRegion(QGraphicsRectItem):
         self.setAcceptHoverEvents(True)
         # Enable focus so wheel events are received.
         self.setFlag(QGraphicsRectItem.GraphicsItemFlag.ItemIsFocusable, True)
+        
         self.setPen(QPen(QColor("red"), 2))
         self.setBrush(QBrush(QColor(165, 0, 0, 30)))
         
@@ -34,8 +36,10 @@ class InteractiveCropRegion(QGraphicsRectItem):
         self._drag_offset = QPointF()
         
         self.handle_positions = {}
+        
+        self.setRect(rect)
+            
         self.updateHandlePositions()
-
 
     def boundingRect(self) -> QRectF:
         """Return the area that needs to be repainted (including handles)."""
@@ -61,7 +65,7 @@ class InteractiveCropRegion(QGraphicsRectItem):
         painter.setPen(self.pen())
         painter.setBrush(Qt.BrushStyle.NoBrush)
         painter.drawRect(self.rect())
-        painter.setBrush(QBrush(QColor("red")))
+        painter.setBrush(Qt.BrushStyle.NoBrush)
         for handle_rect in self.handle_positions.values():
             painter.drawRect(handle_rect)
             painter.drawRect(handle_rect)
@@ -101,6 +105,7 @@ class InteractiveCropRegion(QGraphicsRectItem):
         event.accept()
 
     def mouseMoveEvent(self, event: QMouseEvent):
+        # Normal handling for non-WAN mode
         if self.resizing and self.active_handle:
             current_pos = QPointF(event.pos())
             delta = current_pos - self.start_mouse_pos
@@ -263,3 +268,40 @@ class InteractiveCropRegion(QGraphicsRectItem):
 
         if dx != 0 or dy != 0:
             self.moveBy(dx, dy)
+
+    def update_geometry_on_ratio_change(self):
+        if self.aspect_ratio is not None and self.rect().width() > 0:
+            current_rect = self.rect()
+            current_center = current_rect.center()
+            
+            # Keep current width, adjust height based on new aspect ratio
+            new_width = current_rect.width()
+            new_height = new_width / self.aspect_ratio
+
+            # Ensure minimum size, adjust both width and height if necessary to maintain ratio
+            min_w_for_min_h = self.MIN_SIZE * self.aspect_ratio
+            min_h_for_min_w = self.MIN_SIZE / self.aspect_ratio
+
+            if new_height < self.MIN_SIZE:
+                new_height = self.MIN_SIZE
+                new_width = new_height * self.aspect_ratio 
+           
+            if new_width < self.MIN_SIZE: # Check width after height adjustment
+                new_width = self.MIN_SIZE
+                new_height = new_width / self.aspect_ratio
+
+            # Create new rect centered
+            new_top_left_x = current_center.x() - new_width / 2
+            new_top_left_y = current_center.y() - new_height / 2
+            
+            adjusted_rect = QRectF(new_top_left_x, new_top_left_y, new_width, new_height)
+            
+            self.prepareGeometryChange() # Important before changing geometry that affects boundingRect
+            self.setRect(adjusted_rect.normalized())
+            self.updateHandlePositions()
+            self.clamp_to_scene_bounds() # Ensure it stays within scene after resize
+            
+            if self.scene() and hasattr(self.scene().parent_widget, "crop_rect_finalized"):
+                 # Notify parent that the crop has changed due to aspect ratio update
+                 self.scene().parent_widget.crop_rect_finalized(self.sceneBoundingRect())
+            self.update() # Request a repaint

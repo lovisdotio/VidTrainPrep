@@ -5,6 +5,7 @@ import google.generativeai as genai
 from google.api_core import exceptions # For specific error handling
 from PIL import Image
 import time # for potential retries
+import numpy as np
 
 class VideoExporter:
     def __init__(self, main_app):
@@ -436,35 +437,69 @@ class VideoExporter:
                     # --- 2. Export Cropped Video (if requested) ---
                     exported_cropped_video = False
                     if export_cropped_flag and crop_tuple:
-                        x, y, w, h = crop_tuple
+                        x_crop, y_crop, w_crop, h_crop = crop_tuple # Unpack for clarity in prints
+                        print(f"[DEBUG export_videos] Using crop_tuple for FFmpeg: x={x_crop}, y={y_crop}, w={w_crop}, h={h_crop}")
+                        print(f"[DEBUG export_videos] Video original dims in exporter context: {orig_w}x{orig_h}")
+
                         # Basic validation for crop dimensions
-                        if x < 0 or y < 0 or w <= 0 or h <= 0 or x + w > orig_w or y + h > orig_h:
+                        if x_crop < 0 or y_crop < 0 or w_crop <= 0 or h_crop <= 0 or x_crop + w_crop > orig_w or y_crop + h_crop > orig_h:
                             print(f"    ⚠️ Invalid crop dimensions {crop_tuple} for range {range_index}. Skipping cropped video export.")
                         else:
-                            _, ext = os.path.splitext(original_path) # Use original extension
+                            _, ext = os.path.splitext(original_path)
                             output_name = f"{base_output_name}_cropped{ext}"
                             output_path = os.path.join(output_folder_cropped, output_name)
                             print(f"    🎬 Exporting Cropped Video: {output_name}...")
                             try:
                                 stream = ffmpeg.input(original_path, ss=ss, t=t)
                                 stream = stream.filter('fps', fps=output_fps, round='up')
-                                stream = stream.filter('crop', w, h, x, y)
-                                # Optional scale filter (use self.main_app.longest_edge)
-                                scale_filter_active = getattr(self.main_app, 'longest_edge', 1024) > 0 and self.main_app.resolution_input.text().strip() # Check if input has value
-                                if scale_filter_active:
-                                     print(f"      Applying scale filter, longest edge: {self.main_app.longest_edge}")
-                                     # Ensure longest edge is even for compatibility?
-                                     # longest_edge = self.main_app.longest_edge if self.main_app.longest_edge % 2 == 0 else self.main_app.longest_edge -1
-                                     # if longest_edge <=0 : longest_edge = 2
-                                     # stream = stream.filter('scale', longest_edge, -2) 
-                                     stream = stream.filter('scale', self.main_app.longest_edge, -2) # Allow odd for now
+                                
+                                # Apply crop first
+                                stream = stream.filter('crop', w_crop, h_crop, x_crop, y_crop)
+
+                                # Determine scaling based on mode (fixed or longest_edge/aspect_ratio)
+                                fixed_w_export = getattr(self.main_app, 'fixed_export_width', None)
+                                fixed_h_export = getattr(self.main_app, 'fixed_export_height', None)
+                                scale_params = []
+                                apply_scaling = False
+
+                                if fixed_w_export is not None and fixed_h_export is not None:
+                                    target_w = max(2, (fixed_w_export // 2) * 2)
+                                    target_h = max(2, (fixed_h_export // 2) * 2)
+                                    scale_params = [str(target_w), str(target_h)]
+                                    apply_scaling = True
+                                    print(f"      Scaling (Fixed Res): {target_w}x{target_h}")
+                                else:
+                                    # Not fixed mode, check aspect ratio dropdown
+                                    selected_ratio_text = self.main_app.aspect_ratio_combo.currentText()
+                                    ratio_value = self.main_app.aspect_ratios.get(selected_ratio_text)
+
+                                    if isinstance(ratio_value, (float, int)):
+                                        # A specific numeric aspect ratio is chosen (e.g., 16/9, 1.0)
+                                        # For uncropped, scale based on original segment dimensions (orig_w, orig_h)
+                                        target_w, target_h = -1, -1
+                                        if ratio_value >= 1.0: # Landscape or square
+                                            target_w = orig_w # Use original width of the segment
+                                            target_h = round(orig_w / ratio_value)
+                                        else: # Portrait
+                                            target_h = orig_h # Use original height of the segment
+                                            target_w = round(orig_h * ratio_value)
+
+                                        target_w = max(2, (target_w // 2) * 2)
+                                        target_h = max(2, (target_h // 2) * 2)
+                                        if target_w > 0 and target_h > 0:
+                                            scale_params = [str(target_w), str(target_h)]
+                                            apply_scaling = True
+                                            print(f"      Scaling (Aspect Ratio {selected_ratio_text}): {target_w}x{target_h} based on original {orig_w}x{orig_h}")
+                                    # If ratio_value is "original" or None (Free-form), no scaling based on aspect ratio here.
+
+                                if apply_scaling and scale_params:
+                                    stream = stream.filter('scale', *scale_params)
+                                    stream = stream.filter('setsar', '1') # Apply SAR separately
                                      
-                                stream = stream.output(output_path, r=output_fps, vsync='cfr', map_metadata='-1', **{'c:v': 'libx264', 'preset': 'medium', 'crf': 23}) # Added codec params
-                                # Adding global_header flag might help some players
-                                # stream = stream.global_args('-fflags', '+genpts') 
+                                stream = stream.output(output_path, r=output_fps, vsync='cfr', map_metadata='-1', **{'c:v': 'libx264', 'preset': 'medium', 'crf': 23})
                                 stream.run(overwrite_output=True, quiet=True)
                                 
-                                print(f"      ✅ Exported cropped: {os.path.basename(output_path)}")
+                                print(f"      ✅ Exported Cropped Video: {os.path.basename(output_path)}")
                                 video_path_for_gemini = output_path # Prioritize cropped for Gemini
                                 exported_cropped_video = True
                                 if not generate_gemini_flag:
@@ -484,18 +519,56 @@ class VideoExporter:
                         try:
                             stream = ffmpeg.input(original_path, ss=ss, t=t)
                             stream = stream.filter('fps', fps=output_fps, round='up')
-                            # Optional scale filter
-                            scale_filter_active = getattr(self.main_app, 'longest_edge', 1024) > 0 and self.main_app.resolution_input.text().strip()
-                            if scale_filter_active:
-                                 print(f"      Applying scale filter, longest edge: {self.main_app.longest_edge}")
-                                 # stream = stream.filter('scale', longest_edge, -2) # Use adjusted even edge if needed
-                                 stream = stream.filter('scale', self.main_app.longest_edge, -2)
+                            
+                            # Apply crop if it exists AND if user wants uncropped to also respect selection for scaling
+                            # Current logic: uncropped means full frame from source, then scaled.
+                            # If user wants uncropped *selection* then scaled, crop_tuple should be applied here.
+                            # For now, assume uncropped means full frame, then scaled.
+
+                            # Determine scaling based on mode (fixed or longest_edge/aspect_ratio)
+                            fixed_w_export = getattr(self.main_app, 'fixed_export_width', None)
+                            fixed_h_export = getattr(self.main_app, 'fixed_export_height', None)
+                            scale_params = []
+                            apply_scaling = False
+
+                            if fixed_w_export is not None and fixed_h_export is not None:
+                                target_w = max(2, (fixed_w_export // 2) * 2)
+                                target_h = max(2, (fixed_h_export // 2) * 2)
+                                scale_params = [str(target_w), str(target_h)]
+                                apply_scaling = True
+                                print(f"      Scaling (Fixed Res): {target_w}x{target_h}")
+                            else:
+                                # Not fixed mode, check aspect ratio dropdown
+                                selected_ratio_text = self.main_app.aspect_ratio_combo.currentText()
+                                ratio_value = self.main_app.aspect_ratios.get(selected_ratio_text)
+
+                                if isinstance(ratio_value, (float, int)):
+                                    # A specific numeric aspect ratio is chosen (e.g., 16/9, 1.0)
+                                    # For uncropped, scale based on original segment dimensions (orig_w, orig_h)
+                                    target_w, target_h = -1, -1
+                                    if ratio_value >= 1.0: # Landscape or square
+                                        target_w = orig_w # Use original width of the segment
+                                        target_h = round(orig_w / ratio_value)
+                                    else: # Portrait
+                                        target_h = orig_h # Use original height of the segment
+                                        target_w = round(orig_h * ratio_value)
+
+                                    target_w = max(2, (target_w // 2) * 2)
+                                    target_h = max(2, (target_h // 2) * 2)
+                                    if target_w > 0 and target_h > 0:
+                                        scale_params = [str(target_w), str(target_h)]
+                                        apply_scaling = True
+                                        print(f"      Scaling (Aspect Ratio {selected_ratio_text}): {target_w}x{target_h} based on original {orig_w}x{orig_h}")
+                                # If ratio_value is "original" or None (Free-form), no scaling based on aspect ratio here.
+
+                            if apply_scaling and scale_params:
+                                stream = stream.filter('scale', *scale_params)
+                                stream = stream.filter('setsar', '1') # Apply SAR separately
 
                             stream = stream.output(output_path, r=output_fps, vsync='cfr', map_metadata='-1', **{'c:v': 'libx264', 'preset': 'medium', 'crf': 23})
-                            # stream = stream.global_args('-fflags', '+genpts')
                             stream.run(overwrite_output=True, quiet=True)
                              
-                            print(f"      ✅ Exported uncropped: {os.path.basename(output_path)}")
+                            print(f"      ✅ Exported Uncropped Video: {os.path.basename(output_path)}")
                             if video_path_for_gemini is None: # Use uncropped for Gemini only if cropped wasn't made
                                 video_path_for_gemini = output_path
                             if not generate_gemini_flag:
@@ -545,3 +618,141 @@ class VideoExporter:
         # --- End of Export Process --- 
         print(f"--- Export Process Finished ---")
         QMessageBox.information(self.main_app, "Export Complete", "Finished exporting selected video ranges.")
+
+    def export_first_frames_of_ranges_as_images(self):
+        """
+        Exporte la première frame de chaque range des vidéos sélectionnées (cochées).
+        Applique le crop du range et le fixed resolution si actifs.
+        Génère une description Gemini pour chaque image.
+        """
+        main_app = self.main_app
+        output_folder_images = os.path.join(main_app.folder_path, "exported_images")
+        os.makedirs(output_folder_images, exist_ok=True)
+        print(f"--- Démarrage de l'export des premières frames des ranges (images) vers {output_folder_images} ---")
+
+        # 1. Récupérer les items à exporter (logique similaire à export_videos)
+        items_to_export = []
+        for i in range(main_app.video_list.count()):
+            item = main_app.video_list.item(i)
+            if item.checkState() == Qt.CheckState.Checked:
+                if i >= len(main_app.video_files):
+                    print(f"⚠️ Skipping checked item at index {i}: Mismatch with video_files data.")
+                    continue
+                video_entry = main_app.video_files[i]
+                original_path = video_entry.get("original_path")
+                display_name = video_entry.get("display_name") # Utilisé pour le nom de fichier
+                if not original_path or not os.path.exists(original_path):
+                    print(f"⚠️ Skipping invalid video entry: {display_name} (Path: {original_path})")
+                    continue
+                video_ranges = main_app.video_data.get(original_path, {}).get("ranges", [])
+                if not video_ranges:
+                    print(f"ℹ️ Pas de ranges définis pour la vidéo sélectionnée : {display_name}. Skip.")
+                    continue
+                items_to_export.append({
+                    "original_path": original_path,
+                    "display_name": display_name,
+                    "ranges": video_ranges
+                })
+
+        if not items_to_export:
+            QMessageBox.information(main_app, "Rien à exporter", "Veuillez cocher au moins une vidéo avec des ranges définis.")
+            return
+
+        # 2. Traiter chaque vidéo et ses ranges
+        total_images_exported = 0
+        for video_info in items_to_export:
+            original_path = video_info["original_path"]
+            base_video_name, _ = os.path.splitext(video_info["display_name"])
+            ranges = video_info["ranges"]
+            print(f"Traitement de la source : {video_info['display_name']} ({len(ranges)} ranges)")
+
+            cap = None
+            try:
+                cap = cv2.VideoCapture(original_path)
+                if not cap.isOpened():
+                    print(f"❌ ERREUR : Impossible d'ouvrir la source vidéo {original_path}. Skip.")
+                    continue
+
+                for range_data in ranges:
+                    start_frame = range_data.get("start", 0)
+                    crop_tuple = range_data.get("crop") # Peut être None
+                    range_idx_display = range_data.get("index", "X")
+                    print(f"  Processing Range {range_idx_display}, Start Frame: {start_frame}, Crop: {crop_tuple is not None}")
+
+                    cap.set(cv2.CAP_PROP_POS_FRAMES, start_frame)
+                    ret, frame = cap.read()
+
+                    if not ret or frame is None:
+                        print(f"    ⚠️ Impossible de lire la frame {start_frame} pour le range {range_idx_display}. Skip.")
+                        continue
+                    
+                    img_to_process = frame.copy() # Travailler sur une copie
+
+                    # Appliquer le crop du range s'il existe
+                    if crop_tuple:
+                        x, y, w, h = crop_tuple
+                        current_h_img, current_w_img = img_to_process.shape[:2]
+                        if x < 0 or y < 0 or w <= 0 or h <= 0 or x + w > current_w_img or y + h > current_h_img:
+                            print(f"    [DEBUG Exporter] Crop {crop_tuple} invalide pour image de {current_w_img}x{current_h_img}. Crop ignoré.")
+                        else:
+                            img_to_process = img_to_process[y:y+h, x:x+w]
+                            print(f"    [DEBUG Exporter] Image croppée à {w}x{h} depuis ({x},{y}) pour range {range_idx_display}")
+                    
+                    # Appliquer fixed resolution si actif globalement
+                    fixed_w = getattr(main_app, 'fixed_export_width', None)
+                    fixed_h = getattr(main_app, 'fixed_export_height', None)
+                    if fixed_w and fixed_h:
+                        img_to_process = cv2.resize(img_to_process, (fixed_w, fixed_h), interpolation=cv2.INTER_AREA)
+                        print(f"    [DEBUG Exporter] Image redimensionnée à {fixed_w}x{fixed_h} pour range {range_idx_display}")
+
+                    # Construire le nom de fichier de sortie
+                    image_base_name = f"{base_video_name}_range{range_idx_display}_frame{start_frame}"
+                    count = 0
+                    temp_out_path = os.path.join(output_folder_images, f"{image_base_name}.png")
+                    while os.path.exists(temp_out_path):
+                        count += 1
+                        temp_out_path = os.path.join(output_folder_images, f"{image_base_name}_{count}.png")
+                    out_path_image = temp_out_path
+
+                    try:
+                        cv2.imwrite(out_path_image, img_to_process)
+                        print(f"    ✅ Image exportée : {os.path.basename(out_path_image)}")
+                        total_images_exported += 1
+
+                        # Générer la description Gemini
+                        if getattr(main_app, 'gemini_caption_checkbox', None) and main_app.gemini_caption_checkbox.isChecked():
+                            if not self.gemini_model and not self._configure_gemini():
+                                print("    ⚠️ Gemini non configuré, impossible de générer la description.")
+                                self.write_caption(out_path_image) # Ecrire simple caption si échec config gemini
+                            else:
+                                caption = self.generate_gemini_caption(out_path_image)
+                                if caption:
+                                    self.write_caption(out_path_image, caption_content=caption)
+                                else:
+                                    print(f"    ⚠️ Échec de la génération de description Gemini pour {os.path.basename(out_path_image)}.")
+                                    self.write_caption(out_path_image) # Fallback
+                        else:
+                            self.write_caption(out_path_image) # Ecrire simple caption
+                    except Exception as e_write:
+                        print(f"    ❌ ERREUR lors de l'écriture de l'image {os.path.basename(out_path_image)}: {e_write}")
+
+            except Exception as e_video_proc:
+                print(f"❌ ERREUR lors du traitement de la vidéo {video_info['display_name']}: {e_video_proc}")
+            finally:
+                if cap and cap.isOpened():
+                    cap.release()
+                    print(f"   Source vidéo relâchée : {video_info['display_name']}")
+        
+        print(f"--- Export des premières frames terminé. {total_images_exported} images exportées. ---")
+        QMessageBox.information(main_app, "Export Terminé", f"{total_images_exported} images (premières frames des ranges) ont été exportées.")
+
+    @staticmethod
+    def qimage_to_cv(qimg):
+        """Convertit un QImage en image OpenCV (numpy array)"""
+        qimg = qimg.convertToFormat(4) # QImage.Format.Format_RGB32
+        width = qimg.width()
+        height = qimg.height()
+        ptr = qimg.bits()
+        ptr.setsize(qimg.byteCount())
+        arr = np.array(ptr).reshape(height, width, 4)
+        return cv2.cvtColor(arr, cv2.COLOR_BGRA2BGR)

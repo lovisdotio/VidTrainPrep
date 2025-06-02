@@ -1,0 +1,2445 @@
+{
+    "folder_path": "C:/Users/lovis/Desktop/datablackrooms/converted_16fps",
+    "video_files": [
+        {
+            "original_path": "C:/Users/lovis/Desktop/datablackrooms/converted_16fps\\Backrooms - Autopsy Report.mp4",
+            "display_name": "Backrooms - Autopsy Report.mp4",
+            "copy_number": 0,
+            "export_enabled": true
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/datablackrooms/converted_16fps\\Backrooms - Damage Control.mp4",
+            "display_name": "Backrooms - Damage Control.mp4",
+            "copy_number": 0,
+            "export_enabled": true
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/datablackrooms/converted_16fps\\Backrooms - First Contact.mp4",
+            "display_name": "Backrooms - First Contact.mp4",
+            "copy_number": 0,
+            "export_enabled": true
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/datablackrooms/converted_16fps\\Backrooms - Found Footage #2.mp4",
+            "display_name": "Backrooms - Found Footage #2.mp4",
+            "copy_number": 0,
+            "export_enabled": true
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/datablackrooms/converted_16fps\\Backrooms - Found Footage #3.mp4",
+            "display_name": "Backrooms - Found Footage #3.mp4",
+            "copy_number": 0,
+            "export_enabled": true
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/datablackrooms/converted_16fps\\Backrooms - Informational Video.mp4",
+            "display_name": "Backrooms - Informational Video.mp4",
+            "copy_number": 0,
+            "export_enabled": true
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/datablackrooms/converted_16fps\\Backrooms - Lighting and Tile Survey.mp4",
+            "display_name": "Backrooms - Lighting and Tile Survey.mp4",
+            "copy_number": 0,
+            "export_enabled": true
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/datablackrooms/converted_16fps\\Backrooms - Missing Persons.mp4",
+            "display_name": "Backrooms - Missing Persons.mp4",
+            "copy_number": 0,
+            "export_enabled": true
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/datablackrooms/converted_16fps\\Backrooms - Motion Detected.mp4",
+            "display_name": "Backrooms - Motion Detected.mp4",
+            "copy_number": 0,
+            "export_enabled": true
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/datablackrooms/converted_16fps\\Backrooms - Overflow.mp4",
+            "display_name": "Backrooms - Overflow.mp4",
+            "copy_number": 0,
+            "export_enabled": true
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/datablackrooms/converted_16fps\\Backrooms - Pitfalls.mp4",
+            "display_name": "Backrooms - Pitfalls.mp4",
+            "copy_number": 0,
+            "export_enabled": true
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/datablackrooms/converted_16fps\\Backrooms - Presentation.mp4",
+            "display_name": "Backrooms - Presentation.mp4",
+            "copy_number": 0,
+            "export_enabled": true
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/datablackrooms/converted_16fps\\Backrooms - Prototype.mp4",
+            "display_name": "Backrooms - Prototype.mp4",
+            "copy_number": 0,
+            "export_enabled": true
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/datablackrooms/converted_16fps\\Backrooms - Report.mp4",
+            "display_name": "Backrooms - Report.mp4",
+            "copy_number": 0,
+            "export_enabled": true
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/datablackrooms/converted_16fps\\Backrooms - Reunion.mp4",
+            "display_name": "Backrooms - Reunion.mp4",
+            "copy_number": 0,
+            "export_enabled": true
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/datablackrooms/converted_16fps\\Backrooms - Static Dead End.mp4",
+            "display_name": "Backrooms - Static Dead End.mp4",
+            "copy_number": 0,
+            "export_enabled": true
+        },
+        {
+            "original_path": "C:/Users/lovis/Desktop/datablackrooms/converted_16fps\\Backrooms - The Third Test.mp4",
+            "display_name": "Backrooms - The Third Test.mp4",
+            "copy_number": 0,
+            "export_enabled": true
+        }
+    ],
+    "folder_sessions": {
+        "C:/Users/lovis/Desktop/STARZ": [
+            {
+                "original_path": "C:/Users/lovis/Desktop/STARZ\\01.mp4",
+                "display_name": "01.mp4",
+                "copy_number": 0,
+                "export_enabled": true
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/STARZ\\ai generated.mp4",
+                "display_name": "ai generated.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/STARZ\\AnimateDiff_00317.mp4",
+                "display_name": "AnimateDiff_00317.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/STARZ\\AnimateDiff_00318.mp4",
+                "display_name": "AnimateDiff_00318.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/STARZ\\AnimateDiff_00319.mp4",
+                "display_name": "AnimateDiff_00319.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/STARZ\\AnimateDiff_00320 (1).mp4",
+                "display_name": "AnimateDiff_00320 (1).mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/STARZ\\AnimateDiff_00320.mp4",
+                "display_name": "AnimateDiff_00320.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/STARZ\\AnimateDiff_00321.mp4",
+                "display_name": "AnimateDiff_00321.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/STARZ\\AnimateDiff_00322.mp4",
+                "display_name": "AnimateDiff_00322.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/STARZ\\AnimateDiff_00323 (1).mp4",
+                "display_name": "AnimateDiff_00323 (1).mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/STARZ\\AnimateDiff_00323.mp4",
+                "display_name": "AnimateDiff_00323.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/STARZ\\AnimateDiff_00324.mp4",
+                "display_name": "AnimateDiff_00324.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/STARZ\\AnimateDiff_00325.mp4",
+                "display_name": "AnimateDiff_00325.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/STARZ\\AnimateDiff_00326.mp4",
+                "display_name": "AnimateDiff_00326.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/STARZ\\AnimateDiff_00327.mp4",
+                "display_name": "AnimateDiff_00327.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/STARZ\\FramePack_00001 (1).mp4",
+                "display_name": "FramePack_00001 (1).mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/STARZ\\FramePack_00001 (2).mp4",
+                "display_name": "FramePack_00001 (2).mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/STARZ\\FramePack_00001.mp4",
+                "display_name": "FramePack_00001.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/STARZ\\FramePack_00002.mp4",
+                "display_name": "FramePack_00002.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/STARZ\\FramePack_00013.mp4",
+                "display_name": "FramePack_00013.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/STARZ\\FramePack_00016.mp4",
+                "display_name": "FramePack_00016.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/STARZ\\FULLVIDEOLONG.mp4",
+                "display_name": "FULLVIDEOLONG.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/STARZ\\Gen-3 Alpha Turbo Act-One MAIN_chf3_prob3_1voiceok 4187056312.mp4",
+                "display_name": "Gen-3 Alpha Turbo Act-One MAIN_chf3_prob3_1voiceok 4187056312.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/STARZ\\Gen-3 Alpha Turbo Act-One speech 3594703954.mp4",
+                "display_name": "Gen-3 Alpha Turbo Act-One speech 3594703954.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/STARZ\\Gen-3 Alpha Turbo Act-One video01voix 4187056312.mp4",
+                "display_name": "Gen-3 Alpha Turbo Act-One video01voix 4187056312.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/STARZ\\Gen-3 Alpha Turbo Act-One voice2 4187056312.mp4",
+                "display_name": "Gen-3 Alpha Turbo Act-One voice2 4187056312.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/STARZ\\Gen-3 Alpha Turbo Act-One voice3 4187056312.mp4",
+                "display_name": "Gen-3 Alpha Turbo Act-One voice3 4187056312.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/STARZ\\Gen-3 Alpha Turbo Act-One voice4 4187056312 (1).mp4",
+                "display_name": "Gen-3 Alpha Turbo Act-One voice4 4187056312 (1).mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/STARZ\\Gen-3 Alpha Turbo Act-One voice4 4187056312.mp4",
+                "display_name": "Gen-3 Alpha Turbo Act-One voice4 4187056312.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/STARZ\\Gen-3 Alpha Turbo Act-One voice5 4187056312.mp4",
+                "display_name": "Gen-3 Alpha Turbo Act-One voice5 4187056312.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/STARZ\\MAIN.mp4",
+                "display_name": "MAIN.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/STARZ\\MAIN_chf3_prob3.mov",
+                "display_name": "MAIN_chf3_prob3.mov",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/STARZ\\MAIN_chf3_prob3.mp4",
+                "display_name": "MAIN_chf3_prob3.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/STARZ\\MAIN_chf3_prob3_102.mp4",
+                "display_name": "MAIN_chf3_prob3_102.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/STARZ\\MAIN_chf3_prob3_122.mp4",
+                "display_name": "MAIN_chf3_prob3_122.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/STARZ\\MAIN_chf3_prob3_1voice.mp4",
+                "display_name": "MAIN_chf3_prob3_1voice.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/STARZ\\MAIN_chf3_prob3_1voiceok.mp4",
+                "display_name": "MAIN_chf3_prob3_1voiceok.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/STARZ\\part01.mp4",
+                "display_name": "part01.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/STARZ\\speech.mp4",
+                "display_name": "speech.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/STARZ\\start-ceo-final.mp4",
+                "display_name": "start-ceo-final.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/STARZ\\TfJPbwm6_D60dcWEv9LVX_output_video.mp4",
+                "display_name": "TfJPbwm6_D60dcWEv9LVX_output_video.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/STARZ\\video01video.mp4",
+                "display_name": "video01video.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/STARZ\\video01video_chf3_prob3.mov",
+                "display_name": "video01video_chf3_prob3.mov",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/STARZ\\video01video_chf3_prob3_1.mp4",
+                "display_name": "video01video_chf3_prob3_1.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/STARZ\\video01voix.mp4",
+                "display_name": "video01voix.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/STARZ\\video4.mp4",
+                "display_name": "video4.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/STARZ\\video5.mp4",
+                "display_name": "video5.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/STARZ\\videogood_00004.mp4",
+                "display_name": "videogood_00004.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/STARZ\\videogood_00005.mp4",
+                "display_name": "videogood_00005.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/STARZ\\videoimage2.mp4",
+                "display_name": "videoimage2.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/STARZ\\videook.mp4",
+                "display_name": "videook.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/STARZ\\voice2.mp4",
+                "display_name": "voice2.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/STARZ\\voice3.mp4",
+                "display_name": "voice3.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/STARZ\\voice4.mp4",
+                "display_name": "voice4.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/STARZ\\voice5.mp4",
+                "display_name": "voice5.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/STARZ\\youtube_u9ZocoZTOnQ_1920x1080_h264.mp4",
+                "display_name": "youtube_u9ZocoZTOnQ_1920x1080_h264.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            }
+        ],
+        "E:/data_blackrooms": [],
+        "C:/Users/lovis/Desktop/indiana": [
+            {
+                "original_path": "C:/Users/lovis/Desktop/indiana\\AnimateDiff_00347 (1).mp4",
+                "display_name": "AnimateDiff_00347 (1).mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            }
+        ],
+        "C:/Users/lovis/Desktop/datablackrooms": [
+            {
+                "original_path": "C:/Users/lovis/Desktop/datablackrooms\\Backrooms - Autopsy Report.mp4",
+                "display_name": "Backrooms - Autopsy Report.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/datablackrooms\\Backrooms - Damage Control.mp4",
+                "display_name": "Backrooms - Damage Control.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/datablackrooms\\Backrooms - First Contact.mp4",
+                "display_name": "Backrooms - First Contact.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/datablackrooms\\Backrooms - Found Footage #2.mp4",
+                "display_name": "Backrooms - Found Footage #2.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/datablackrooms\\Backrooms - Found Footage #3.mp4",
+                "display_name": "Backrooms - Found Footage #3.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/datablackrooms\\Backrooms - Informational Video.mp4",
+                "display_name": "Backrooms - Informational Video.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/datablackrooms\\Backrooms - Lighting and Tile Survey.mp4",
+                "display_name": "Backrooms - Lighting and Tile Survey.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/datablackrooms\\Backrooms - Missing Persons.mp4",
+                "display_name": "Backrooms - Missing Persons.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/datablackrooms\\Backrooms - Motion Detected.mp4",
+                "display_name": "Backrooms - Motion Detected.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/datablackrooms\\Backrooms - Overflow.mp4",
+                "display_name": "Backrooms - Overflow.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/datablackrooms\\Backrooms - Pitfalls.mp4",
+                "display_name": "Backrooms - Pitfalls.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/datablackrooms\\Backrooms - Presentation.mp4",
+                "display_name": "Backrooms - Presentation.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/datablackrooms\\Backrooms - Prototype.mp4",
+                "display_name": "Backrooms - Prototype.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/datablackrooms\\Backrooms - Report.mp4",
+                "display_name": "Backrooms - Report.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/datablackrooms\\Backrooms - Reunion.mp4",
+                "display_name": "Backrooms - Reunion.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/datablackrooms\\Backrooms - Static Dead End.mp4",
+                "display_name": "Backrooms - Static Dead End.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/datablackrooms\\Backrooms - The Third Test.mp4",
+                "display_name": "Backrooms - The Third Test.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            }
+        ],
+        "C:/Users/lovis/Desktop/datablackrooms\\converted_16fps": [
+            {
+                "original_path": "C:/Users/lovis/Desktop/datablackrooms\\converted_16fps\\Backrooms - Autopsy Report.mp4",
+                "display_name": "Backrooms - Autopsy Report.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/datablackrooms\\converted_16fps\\Backrooms - Damage Control.mp4",
+                "display_name": "Backrooms - Damage Control.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/datablackrooms\\converted_16fps\\Backrooms - First Contact.mp4",
+                "display_name": "Backrooms - First Contact.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/datablackrooms\\converted_16fps\\Backrooms - Found Footage #2.mp4",
+                "display_name": "Backrooms - Found Footage #2.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/datablackrooms\\converted_16fps\\Backrooms - Found Footage #3.mp4",
+                "display_name": "Backrooms - Found Footage #3.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/datablackrooms\\converted_16fps\\Backrooms - Informational Video.mp4",
+                "display_name": "Backrooms - Informational Video.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/datablackrooms\\converted_16fps\\Backrooms - Lighting and Tile Survey.mp4",
+                "display_name": "Backrooms - Lighting and Tile Survey.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/datablackrooms\\converted_16fps\\Backrooms - Missing Persons.mp4",
+                "display_name": "Backrooms - Missing Persons.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/datablackrooms\\converted_16fps\\Backrooms - Motion Detected.mp4",
+                "display_name": "Backrooms - Motion Detected.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/datablackrooms\\converted_16fps\\Backrooms - Overflow.mp4",
+                "display_name": "Backrooms - Overflow.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/datablackrooms\\converted_16fps\\Backrooms - Pitfalls.mp4",
+                "display_name": "Backrooms - Pitfalls.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/datablackrooms\\converted_16fps\\Backrooms - Presentation.mp4",
+                "display_name": "Backrooms - Presentation.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/datablackrooms\\converted_16fps\\Backrooms - Prototype.mp4",
+                "display_name": "Backrooms - Prototype.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/datablackrooms\\converted_16fps\\Backrooms - Report.mp4",
+                "display_name": "Backrooms - Report.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/datablackrooms\\converted_16fps\\Backrooms - Reunion.mp4",
+                "display_name": "Backrooms - Reunion.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/datablackrooms\\converted_16fps\\Backrooms - Static Dead End.mp4",
+                "display_name": "Backrooms - Static Dead End.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/datablackrooms\\converted_16fps\\Backrooms - The Third Test.mp4",
+                "display_name": "Backrooms - The Third Test.mp4",
+                "copy_number": 0,
+                "export_enabled": false
+            }
+        ],
+        "C:/Users/lovis/Desktop/datablackrooms/converted_16fps": [
+            {
+                "original_path": "C:/Users/lovis/Desktop/datablackrooms/converted_16fps\\Backrooms - Autopsy Report.mp4",
+                "display_name": "Backrooms - Autopsy Report.mp4",
+                "copy_number": 0,
+                "export_enabled": true
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/datablackrooms/converted_16fps\\Backrooms - Damage Control.mp4",
+                "display_name": "Backrooms - Damage Control.mp4",
+                "copy_number": 0,
+                "export_enabled": true
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/datablackrooms/converted_16fps\\Backrooms - First Contact.mp4",
+                "display_name": "Backrooms - First Contact.mp4",
+                "copy_number": 0,
+                "export_enabled": true
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/datablackrooms/converted_16fps\\Backrooms - Found Footage #2.mp4",
+                "display_name": "Backrooms - Found Footage #2.mp4",
+                "copy_number": 0,
+                "export_enabled": true
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/datablackrooms/converted_16fps\\Backrooms - Found Footage #3.mp4",
+                "display_name": "Backrooms - Found Footage #3.mp4",
+                "copy_number": 0,
+                "export_enabled": true
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/datablackrooms/converted_16fps\\Backrooms - Informational Video.mp4",
+                "display_name": "Backrooms - Informational Video.mp4",
+                "copy_number": 0,
+                "export_enabled": true
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/datablackrooms/converted_16fps\\Backrooms - Lighting and Tile Survey.mp4",
+                "display_name": "Backrooms - Lighting and Tile Survey.mp4",
+                "copy_number": 0,
+                "export_enabled": true
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/datablackrooms/converted_16fps\\Backrooms - Missing Persons.mp4",
+                "display_name": "Backrooms - Missing Persons.mp4",
+                "copy_number": 0,
+                "export_enabled": true
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/datablackrooms/converted_16fps\\Backrooms - Motion Detected.mp4",
+                "display_name": "Backrooms - Motion Detected.mp4",
+                "copy_number": 0,
+                "export_enabled": true
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/datablackrooms/converted_16fps\\Backrooms - Overflow.mp4",
+                "display_name": "Backrooms - Overflow.mp4",
+                "copy_number": 0,
+                "export_enabled": true
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/datablackrooms/converted_16fps\\Backrooms - Pitfalls.mp4",
+                "display_name": "Backrooms - Pitfalls.mp4",
+                "copy_number": 0,
+                "export_enabled": true
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/datablackrooms/converted_16fps\\Backrooms - Presentation.mp4",
+                "display_name": "Backrooms - Presentation.mp4",
+                "copy_number": 0,
+                "export_enabled": true
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/datablackrooms/converted_16fps\\Backrooms - Prototype.mp4",
+                "display_name": "Backrooms - Prototype.mp4",
+                "copy_number": 0,
+                "export_enabled": true
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/datablackrooms/converted_16fps\\Backrooms - Report.mp4",
+                "display_name": "Backrooms - Report.mp4",
+                "copy_number": 0,
+                "export_enabled": true
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/datablackrooms/converted_16fps\\Backrooms - Reunion.mp4",
+                "display_name": "Backrooms - Reunion.mp4",
+                "copy_number": 0,
+                "export_enabled": true
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/datablackrooms/converted_16fps\\Backrooms - Static Dead End.mp4",
+                "display_name": "Backrooms - Static Dead End.mp4",
+                "copy_number": 0,
+                "export_enabled": true
+            },
+            {
+                "original_path": "C:/Users/lovis/Desktop/datablackrooms/converted_16fps\\Backrooms - The Third Test.mp4",
+                "display_name": "Backrooms - The Third Test.mp4",
+                "copy_number": 0,
+                "export_enabled": true
+            }
+        ]
+    },
+    "video_data": {
+        "C:/Users/lovis/Desktop/STARZ\\01.mp4": {
+            "ranges": []
+        },
+        "C:/Users/lovis/Desktop/indiana\\AnimateDiff_00347 (1).mp4": {
+            "ranges": []
+        },
+        "C:/Users/lovis/Desktop/datablackrooms\\Backrooms - Autopsy Report.mp4": {
+            "ranges": [
+                {
+                    "id": "1e330ede-2b1b-4215-a35c-c89b7b70a239",
+                    "start": 0,
+                    "end": 60,
+                    "crop": null,
+                    "index": 1
+                }
+            ]
+        },
+        "C:/Users/lovis/Desktop/datablackrooms\\Backrooms - The Third Test.mp4": {
+            "ranges": [
+                {
+                    "id": "d05e8a5f-18e0-49e4-80d0-c84818f6d727",
+                    "start": 0,
+                    "end": 60,
+                    "crop": null,
+                    "index": 1
+                }
+            ]
+        },
+        "C:/Users/lovis/Desktop/datablackrooms\\Backrooms - Static Dead End.mp4": {
+            "ranges": [
+                {
+                    "id": "7b324227-bc81-4ccb-93db-37d4c0106c2d",
+                    "start": 0,
+                    "end": 60,
+                    "crop": null,
+                    "index": 1
+                }
+            ]
+        },
+        "C:/Users/lovis/Desktop/datablackrooms\\Backrooms - Reunion.mp4": {
+            "ranges": [
+                {
+                    "id": "49094313-ffc6-490b-a4e7-56e66e85b80c",
+                    "start": 0,
+                    "end": 60,
+                    "crop": null,
+                    "index": 1
+                }
+            ]
+        },
+        "C:/Users/lovis/Desktop/datablackrooms\\Backrooms - Report.mp4": {
+            "ranges": [
+                {
+                    "id": "c1a4efec-7daa-493a-9574-51bfad22c1c1",
+                    "start": 0,
+                    "end": 60,
+                    "crop": null,
+                    "index": 1
+                }
+            ]
+        },
+        "C:/Users/lovis/Desktop/datablackrooms\\Backrooms - Prototype.mp4": {
+            "ranges": [
+                {
+                    "id": "2fdcd2b7-de29-4be1-a9e4-4c6664e6eeea",
+                    "start": 0,
+                    "end": 60,
+                    "crop": null,
+                    "index": 1
+                }
+            ]
+        },
+        "C:/Users/lovis/Desktop/datablackrooms\\Backrooms - Presentation.mp4": {
+            "ranges": [
+                {
+                    "id": "4615b0bb-b194-454e-b2ae-c72eea345474",
+                    "start": 0,
+                    "end": 60,
+                    "crop": null,
+                    "index": 1
+                }
+            ]
+        },
+        "C:/Users/lovis/Desktop/datablackrooms\\Backrooms - Informational Video.mp4": {
+            "ranges": [
+                {
+                    "id": "c626d7e9-c860-445d-9bd0-7873f31edc89",
+                    "start": 0,
+                    "end": 60,
+                    "crop": null,
+                    "index": 1
+                }
+            ]
+        },
+        "C:/Users/lovis/Desktop/datablackrooms\\Backrooms - Lighting and Tile Survey.mp4": {
+            "ranges": [
+                {
+                    "id": "b517bd8b-3b5f-4eb9-aa68-1100639c6460",
+                    "start": 0,
+                    "end": 60,
+                    "crop": null,
+                    "index": 1
+                }
+            ]
+        },
+        "C:/Users/lovis/Desktop/datablackrooms\\Backrooms - Missing Persons.mp4": {
+            "ranges": [
+                {
+                    "id": "e962f03e-5f8e-4f2b-95c9-38129a0b44ea",
+                    "start": 0,
+                    "end": 60,
+                    "crop": null,
+                    "index": 1
+                }
+            ]
+        },
+        "C:/Users/lovis/Desktop/datablackrooms\\Backrooms - Motion Detected.mp4": {
+            "ranges": [
+                {
+                    "id": "b424e756-a14b-4e42-b261-41c2e94b9eaf",
+                    "start": 0,
+                    "end": 60,
+                    "crop": null,
+                    "index": 1
+                }
+            ]
+        },
+        "C:/Users/lovis/Desktop/datablackrooms\\Backrooms - Pitfalls.mp4": {
+            "ranges": [
+                {
+                    "id": "942183c9-e569-4c00-afe8-c3a0db12ea76",
+                    "start": 0,
+                    "end": 60,
+                    "crop": null,
+                    "index": 1
+                }
+            ]
+        },
+        "C:/Users/lovis/Desktop/datablackrooms\\Backrooms - Overflow.mp4": {
+            "ranges": [
+                {
+                    "id": "897ec5bb-f64b-4531-9b33-edb8bc2fd508",
+                    "start": 0,
+                    "end": 60,
+                    "crop": null,
+                    "index": 1
+                }
+            ]
+        },
+        "C:/Users/lovis/Desktop/datablackrooms\\Backrooms - Damage Control.mp4": {
+            "ranges": [
+                {
+                    "id": "2b279a7d-c429-41dd-ab4e-e129b7a07405",
+                    "start": 0,
+                    "end": 60,
+                    "crop": null,
+                    "index": 1
+                }
+            ]
+        },
+        "C:/Users/lovis/Desktop/datablackrooms\\Backrooms - First Contact.mp4": {
+            "ranges": [
+                {
+                    "id": "84b2f945-aed0-4f2f-83d9-fbedbfe849c3",
+                    "start": 0,
+                    "end": 60,
+                    "crop": null,
+                    "index": 1
+                }
+            ]
+        },
+        "C:/Users/lovis/Desktop/datablackrooms\\Backrooms - Found Footage #2.mp4": {
+            "ranges": [
+                {
+                    "id": "d8aa6852-bdf0-459a-bc90-0796e670a690",
+                    "start": 0,
+                    "end": 60,
+                    "crop": null,
+                    "index": 1
+                }
+            ]
+        },
+        "C:/Users/lovis/Desktop/datablackrooms\\Backrooms - Found Footage #3.mp4": {
+            "ranges": [
+                {
+                    "id": "f6773a37-19ab-49a9-b483-b00f447e29b1",
+                    "start": 0,
+                    "end": 60,
+                    "crop": null,
+                    "index": 1
+                }
+            ]
+        },
+        "C:/Users/lovis/Desktop/datablackrooms/converted_16fps\\Backrooms - Autopsy Report.mp4": {
+            "ranges": [
+                {
+                    "id": "ac19a257-321c-49a9-8e1d-b016d1c1fbe1",
+                    "start": 120,
+                    "end": 202,
+                    "crop": null,
+                    "index": 1
+                },
+                {
+                    "id": "fe8fc1a1-1e35-4095-bff1-9aed96aa3a8a",
+                    "start": 225,
+                    "end": 307,
+                    "crop": null,
+                    "index": 2
+                },
+                {
+                    "id": "f81ec80e-3a22-4cb4-9041-cb9adde97fba",
+                    "start": 371,
+                    "end": 453,
+                    "crop": null,
+                    "index": 3
+                },
+                {
+                    "id": "5de5ead3-a1fd-4ecd-866b-78495c251cbe",
+                    "start": 500,
+                    "end": 582,
+                    "crop": null,
+                    "index": 4
+                },
+                {
+                    "id": "2a45634f-552f-46ba-ae25-a169f7adc37f",
+                    "start": 636,
+                    "end": 718,
+                    "crop": null,
+                    "index": 5
+                },
+                {
+                    "id": "22cb7869-0df1-4301-b279-d3a4cf7634a4",
+                    "start": 812,
+                    "end": 894,
+                    "crop": null,
+                    "index": 6
+                },
+                {
+                    "id": "be281eda-88e6-49f0-a0d9-a248572236bc",
+                    "start": 1212,
+                    "end": 1294,
+                    "crop": null,
+                    "index": 7
+                },
+                {
+                    "id": "a415bc1c-952c-4a23-b3cb-86d43981571a",
+                    "start": 1476,
+                    "end": 1558,
+                    "crop": null,
+                    "index": 8
+                },
+                {
+                    "id": "dcae2a44-15cd-44cd-9736-1d5d270699b7",
+                    "start": 1910,
+                    "end": 1992,
+                    "crop": null,
+                    "index": 9
+                },
+                {
+                    "id": "25f9c963-5bc2-4978-9395-a6077b44f9bf",
+                    "start": 2131,
+                    "end": 2213,
+                    "crop": null,
+                    "index": 10
+                },
+                {
+                    "id": "c29d5fde-2d2c-4556-bdfe-73f8b958766e",
+                    "start": 2278,
+                    "end": 2360,
+                    "crop": null,
+                    "index": 11
+                },
+                {
+                    "id": "6b084620-1def-4452-84dd-347751790997",
+                    "start": 1605,
+                    "end": 1687,
+                    "crop": [
+                        12,
+                        32,
+                        365,
+                        275
+                    ],
+                    "index": 12
+                }
+            ]
+        },
+        "C:/Users/lovis/Desktop/datablackrooms/converted_16fps\\Backrooms - First Contact.mp4": {
+            "ranges": [
+                {
+                    "id": "477fa795-e87b-4f4e-84dc-32be45d317ca",
+                    "start": 214,
+                    "end": 296,
+                    "crop": null,
+                    "index": 1
+                },
+                {
+                    "id": "16f37999-240a-4b81-b4cc-c8286a5387d2",
+                    "start": 434,
+                    "end": 516,
+                    "crop": null,
+                    "index": 2
+                },
+                {
+                    "id": "a3abe0e6-213a-47ce-a2eb-58157922eaf0",
+                    "start": 501,
+                    "end": 583,
+                    "crop": null,
+                    "index": 3
+                },
+                {
+                    "id": "d50be8b0-65d1-44ea-b71b-510f6d7055cd",
+                    "start": 850,
+                    "end": 932,
+                    "crop": null,
+                    "index": 4
+                },
+                {
+                    "id": "3a664b6e-5965-4919-96ba-63c83263a418",
+                    "start": 944,
+                    "end": 1026,
+                    "crop": null,
+                    "index": 5
+                },
+                {
+                    "id": "3daab9bf-1320-455e-b6fb-3b8bb3f98e2f",
+                    "start": 1036,
+                    "end": 1118,
+                    "crop": null,
+                    "index": 6
+                },
+                {
+                    "id": "53f8d5ce-77a4-43ac-88bf-dbfe6f929ac2",
+                    "start": 1583,
+                    "end": 1665,
+                    "crop": null,
+                    "index": 7
+                },
+                {
+                    "id": "6322c0ab-a11f-40a0-a943-1c9a3eddbc0a",
+                    "start": 1747,
+                    "end": 1829,
+                    "crop": null,
+                    "index": 8
+                }
+            ]
+        },
+        "C:/Users/lovis/Desktop/datablackrooms/converted_16fps\\Backrooms - Found Footage #2.mp4": {
+            "ranges": [
+                {
+                    "id": "a189e0b7-d463-418c-ab79-ad670efd4858",
+                    "start": 128,
+                    "end": 210,
+                    "crop": null,
+                    "index": 1
+                },
+                {
+                    "id": "c0cd675a-0275-4197-bae7-2a1a8b283f6b",
+                    "start": 376,
+                    "end": 458,
+                    "crop": [
+                        36,
+                        49,
+                        331,
+                        249
+                    ],
+                    "index": 2
+                },
+                {
+                    "id": "547eaf05-218a-4ff9-9cae-f08f9dda1f18",
+                    "start": 935,
+                    "end": 1017,
+                    "crop": null,
+                    "index": 3
+                },
+                {
+                    "id": "8c0e3912-0c4d-4f33-916d-d24be8e56768",
+                    "start": 1475,
+                    "end": 1557,
+                    "crop": null,
+                    "index": 4
+                },
+                {
+                    "id": "2cc18ad5-7cbc-4da5-bb5b-62826a5f49c9",
+                    "start": 1769,
+                    "end": 1851,
+                    "crop": null,
+                    "index": 5
+                },
+                {
+                    "id": "aa2e84e5-4e03-450a-8d08-205ea4f59197",
+                    "start": 2044,
+                    "end": 2126,
+                    "crop": null,
+                    "index": 6
+                },
+                {
+                    "id": "042ce3fc-6d6b-4369-92e9-feaaceb367e9",
+                    "start": 2282,
+                    "end": 2364,
+                    "crop": null,
+                    "index": 7
+                },
+                {
+                    "id": "72abc6e1-8efc-4453-a661-5cec5d9ad11b",
+                    "start": 2465,
+                    "end": 2547,
+                    "crop": null,
+                    "index": 8
+                },
+                {
+                    "id": "40d6765e-9392-45a0-bdb7-343d532dff9e",
+                    "start": 2630,
+                    "end": 2712,
+                    "crop": null,
+                    "index": 9
+                },
+                {
+                    "id": "f6a41172-46c6-4027-a790-a79f6d23e4be",
+                    "start": 2823,
+                    "end": 2905,
+                    "crop": null,
+                    "index": 10
+                },
+                {
+                    "id": "114f20b3-397c-4a53-a198-1d17f28c3f3e",
+                    "start": 3162,
+                    "end": 3244,
+                    "crop": null,
+                    "index": 11
+                },
+                {
+                    "id": "5bf9da46-a3e4-4b7e-ad94-79a1ec43da75",
+                    "start": 3354,
+                    "end": 3436,
+                    "crop": null,
+                    "index": 12
+                },
+                {
+                    "id": "549f8515-10cf-43c6-acaf-c2169df8912e",
+                    "start": 3611,
+                    "end": 3693,
+                    "crop": null,
+                    "index": 13
+                },
+                {
+                    "id": "434f8afa-765e-4b54-aaae-861b42277c17",
+                    "start": 3904,
+                    "end": 3986,
+                    "crop": null,
+                    "index": 14
+                },
+                {
+                    "id": "8fdc93e7-b948-43d2-99cc-a0f4659d74c7",
+                    "start": 4325,
+                    "end": 4407,
+                    "crop": null,
+                    "index": 15
+                },
+                {
+                    "id": "26cce907-6150-4840-b6aa-cabd9486d932",
+                    "start": 4811,
+                    "end": 4893,
+                    "crop": null,
+                    "index": 16
+                },
+                {
+                    "id": "c82c7b06-86d3-4403-97d1-f1bf8beea243",
+                    "start": 5251,
+                    "end": 5333,
+                    "crop": null,
+                    "index": 17
+                },
+                {
+                    "id": "8d1188ca-a6e2-4de9-8111-d97372fe1372",
+                    "start": 5535,
+                    "end": 5617,
+                    "crop": null,
+                    "index": 18
+                },
+                {
+                    "id": "3a7915a6-56c2-451f-93a6-21f1f25c43bf",
+                    "start": 5911,
+                    "end": 5993,
+                    "crop": null,
+                    "index": 19
+                },
+                {
+                    "id": "a845119c-2c96-448d-84ca-6beb7e46cafa",
+                    "start": 6342,
+                    "end": 6424,
+                    "crop": null,
+                    "index": 20
+                },
+                {
+                    "id": "d786e32a-4edd-4b1f-bfd3-efee310e7842",
+                    "start": 6424,
+                    "end": 6506,
+                    "crop": null,
+                    "index": 21
+                },
+                {
+                    "id": "e58047a0-bc05-43c4-87ea-6cf7ba1db40e",
+                    "start": 7212,
+                    "end": 7294,
+                    "crop": null,
+                    "index": 22
+                },
+                {
+                    "id": "1cb68d1d-3172-4dcd-9815-6e826354168c",
+                    "start": 7414,
+                    "end": 7496,
+                    "crop": null,
+                    "index": 23
+                },
+                {
+                    "id": "791f74a6-0fd3-4e8a-ad2e-badf1b266aab",
+                    "start": 7744,
+                    "end": 7826,
+                    "crop": null,
+                    "index": 24
+                },
+                {
+                    "id": "95f3cbf8-b535-4dca-9871-917d4cdf8ce8",
+                    "start": 8092,
+                    "end": 8174,
+                    "crop": null,
+                    "index": 25
+                },
+                {
+                    "id": "de742cf0-3314-4e68-9df0-9ae0ef637a25",
+                    "start": 8440,
+                    "end": 8522,
+                    "crop": null,
+                    "index": 26
+                },
+                {
+                    "id": "1a690aae-528a-4fc7-aced-9f8de9da7487",
+                    "start": 8706,
+                    "end": 8788,
+                    "crop": null,
+                    "index": 27
+                },
+                {
+                    "id": "5c018ed5-1540-4a1d-9762-07e0baaa0e61",
+                    "start": 9219,
+                    "end": 9301,
+                    "crop": null,
+                    "index": 28
+                },
+                {
+                    "id": "b5aacff7-3979-4b7f-9ec8-61024a8ab51a",
+                    "start": 9421,
+                    "end": 9503,
+                    "crop": null,
+                    "index": 29
+                },
+                {
+                    "id": "02631f4f-26b1-4e83-ae01-27910ed857d2",
+                    "start": 9732,
+                    "end": 9814,
+                    "crop": null,
+                    "index": 30
+                },
+                {
+                    "id": "b92ceece-4229-482d-986d-e13414e45c3b",
+                    "start": 10246,
+                    "end": 10328,
+                    "crop": null,
+                    "index": 31
+                },
+                {
+                    "id": "0be7bb29-c769-41d9-a111-25d2ee5fc406",
+                    "start": 10924,
+                    "end": 11006,
+                    "crop": null,
+                    "index": 32
+                },
+                {
+                    "id": "bff91d0b-d024-4737-aad6-af5bcd503056",
+                    "start": 11419,
+                    "end": 11501,
+                    "crop": null,
+                    "index": 33
+                },
+                {
+                    "id": "18357f4a-cdd1-4527-904a-da93c40d2864",
+                    "start": 11730,
+                    "end": 11812,
+                    "crop": null,
+                    "index": 34
+                },
+                {
+                    "id": "f04b60fa-041a-4c06-b755-fc47cd962dca",
+                    "start": 12335,
+                    "end": 12417,
+                    "crop": null,
+                    "index": 35
+                },
+                {
+                    "id": "f95a9e0b-14b5-4ab8-a3ea-9e4decbd8d68",
+                    "start": 12399,
+                    "end": 12481,
+                    "crop": null,
+                    "index": 36
+                }
+            ]
+        },
+        "C:/Users/lovis/Desktop/datablackrooms/converted_16fps\\Backrooms - Damage Control.mp4": {
+            "ranges": [
+                {
+                    "id": "9c90277c-e988-43a9-92c8-0ee41573a068",
+                    "start": 67,
+                    "end": 149,
+                    "crop": [
+                        34,
+                        41,
+                        363,
+                        273
+                    ],
+                    "index": 1
+                },
+                {
+                    "id": "bbd6f00c-cd9c-4133-b521-21177c9ae886",
+                    "start": 318,
+                    "end": 400,
+                    "crop": null,
+                    "index": 2
+                },
+                {
+                    "id": "95b40596-7e6e-4af2-a86e-4ad4686032e8",
+                    "start": 529,
+                    "end": 611,
+                    "crop": null,
+                    "index": 3
+                },
+                {
+                    "id": "5a2ed35e-775e-4e7f-b8db-9ebc9734bd68",
+                    "start": 693,
+                    "end": 775,
+                    "crop": null,
+                    "index": 4
+                },
+                {
+                    "id": "bd94d9d5-a963-4845-93fb-f15103ecdce1",
+                    "start": 982,
+                    "end": 1064,
+                    "crop": null,
+                    "index": 5
+                },
+                {
+                    "id": "2c289e31-36ca-4444-866f-6c908b709fed",
+                    "start": 1155,
+                    "end": 1237,
+                    "crop": null,
+                    "index": 6
+                },
+                {
+                    "id": "a8b7115c-efbe-41a2-9ffb-d7be334573d0",
+                    "start": 1463,
+                    "end": 1545,
+                    "crop": null,
+                    "index": 7
+                },
+                {
+                    "id": "4bb1f823-08b4-41c0-b777-8218646e7584",
+                    "start": 1742,
+                    "end": 1824,
+                    "crop": null,
+                    "index": 8
+                },
+                {
+                    "id": "01fe417d-5e8e-43f7-b227-ecd7b9125fdb",
+                    "start": 1925,
+                    "end": 2007,
+                    "crop": null,
+                    "index": 9
+                },
+                {
+                    "id": "c079023c-094d-4c73-a008-b2c6fd6c6392",
+                    "start": 2127,
+                    "end": 2209,
+                    "crop": null,
+                    "index": 10
+                },
+                {
+                    "id": "cb76d73e-99b2-4dec-8eb3-f0521b83fb6c",
+                    "start": 2589,
+                    "end": 2671,
+                    "crop": null,
+                    "index": 11
+                },
+                {
+                    "id": "5d355717-9fc2-4db5-8251-8982c9fbb98f",
+                    "start": 3128,
+                    "end": 3210,
+                    "crop": null,
+                    "index": 12
+                },
+                {
+                    "id": "ac1d6206-6b8b-46f2-8f1b-f18fa2942e4d",
+                    "start": 3696,
+                    "end": 3778,
+                    "crop": null,
+                    "index": 13
+                },
+                {
+                    "id": "1d4bafbd-ef2e-4497-8cc6-3c5fe2510c10",
+                    "start": 3946,
+                    "end": 4028,
+                    "crop": null,
+                    "index": 14
+                },
+                {
+                    "id": "48da98fb-e367-489d-9908-7bf07d6e2782",
+                    "start": 5197,
+                    "end": 5279,
+                    "crop": null,
+                    "index": 15
+                },
+                {
+                    "id": "76d2f018-9af0-488b-99b8-9d506043dd1e",
+                    "start": 6439,
+                    "end": 6521,
+                    "crop": null,
+                    "index": 16
+                },
+                {
+                    "id": "93d80a65-fc30-4755-a190-1c2ee80b2618",
+                    "start": 6776,
+                    "end": 6858,
+                    "crop": null,
+                    "index": 17
+                },
+                {
+                    "id": "c477f16f-9cd3-4a71-b0f0-c4802d34614c",
+                    "start": 7276,
+                    "end": 7358,
+                    "crop": null,
+                    "index": 18
+                },
+                {
+                    "id": "f856e05a-d759-4115-b293-cdad14a63fdb",
+                    "start": 7623,
+                    "end": 7705,
+                    "crop": null,
+                    "index": 19
+                },
+                {
+                    "id": "01414334-9cae-43c1-b862-595843109c56",
+                    "start": 7892,
+                    "end": 7974,
+                    "crop": null,
+                    "index": 20
+                },
+                {
+                    "id": "c4ece1d8-9d87-4b96-bf74-67ed98a05d1c",
+                    "start": 8075,
+                    "end": 8157,
+                    "crop": null,
+                    "index": 21
+                },
+                {
+                    "id": "41c5b600-9efd-498f-9f0f-e6124130f1d6",
+                    "start": 8431,
+                    "end": 8513,
+                    "crop": null,
+                    "index": 22
+                },
+                {
+                    "id": "50fb905a-65c9-49b6-8027-98a8e219de8c",
+                    "start": 9846,
+                    "end": 9928,
+                    "crop": null,
+                    "index": 23
+                },
+                {
+                    "id": "8760f1c8-b71d-449d-aace-6a9427485e0b",
+                    "start": 10212,
+                    "end": 10294,
+                    "crop": null,
+                    "index": 24
+                },
+                {
+                    "id": "7c5d840e-38c2-423b-a339-e7ba49940375",
+                    "start": 11155,
+                    "end": 11237,
+                    "crop": null,
+                    "index": 25
+                },
+                {
+                    "id": "451339d5-c83d-47cf-bba9-9e389e494dc0",
+                    "start": 12329,
+                    "end": 12411,
+                    "crop": null,
+                    "index": 26
+                },
+                {
+                    "id": "e8f0ae6b-6f3a-43ec-a779-6bb312c7fd18",
+                    "start": 12964,
+                    "end": 13046,
+                    "crop": null,
+                    "index": 27
+                },
+                {
+                    "id": "a5910e53-2663-4239-8ef6-b020508368f1",
+                    "start": 6189,
+                    "end": 6271,
+                    "crop": null,
+                    "index": 28
+                }
+            ]
+        },
+        "C:/Users/lovis/Desktop/datablackrooms/converted_16fps\\Backrooms - Found Footage #3.mp4": {
+            "ranges": [
+                {
+                    "id": "c507099f-6e13-43ad-b749-58aebba3ad62",
+                    "start": 709,
+                    "end": 791,
+                    "crop": null,
+                    "index": 1
+                },
+                {
+                    "id": "c024df8a-2880-4425-aa43-70963b05037a",
+                    "start": 1912,
+                    "end": 1994,
+                    "crop": null,
+                    "index": 2
+                },
+                {
+                    "id": "8e9e7580-82b0-44b3-9703-3cd8cd541aff",
+                    "start": 2622,
+                    "end": 2704,
+                    "crop": null,
+                    "index": 3
+                },
+                {
+                    "id": "2707bf20-6717-4ac1-9feb-0e868904eb57",
+                    "start": 4318,
+                    "end": 4400,
+                    "crop": null,
+                    "index": 4
+                },
+                {
+                    "id": "79b502fb-8130-4528-bae7-475881ddb06e",
+                    "start": 5059,
+                    "end": 5141,
+                    "crop": null,
+                    "index": 5
+                },
+                {
+                    "id": "8aa15f0e-abcc-4854-a8e1-1e08e30ced05",
+                    "start": 6200,
+                    "end": 6282,
+                    "crop": null,
+                    "index": 6
+                },
+                {
+                    "id": "08732f31-0337-44dd-a1cb-ff3c7b36e8f1",
+                    "start": 6385,
+                    "end": 6467,
+                    "crop": null,
+                    "index": 7
+                },
+                {
+                    "id": "52e2ed4b-1aff-47ee-a7e0-13a91fb9275c",
+                    "start": 7095,
+                    "end": 7177,
+                    "crop": null,
+                    "index": 8
+                },
+                {
+                    "id": "4cd6099f-3806-45a3-95fd-ce25615a3c9e",
+                    "start": 7866,
+                    "end": 7948,
+                    "crop": null,
+                    "index": 9
+                },
+                {
+                    "id": "058fd623-5e62-48ea-aef7-57dd7b6e218d",
+                    "start": 8513,
+                    "end": 8595,
+                    "crop": null,
+                    "index": 10
+                },
+                {
+                    "id": "df81e751-cc2d-4169-8f62-85fe4549587d",
+                    "start": 9531,
+                    "end": 9613,
+                    "crop": null,
+                    "index": 11
+                },
+                {
+                    "id": "d14ec0ba-5331-423d-95c8-3d386cc4d920",
+                    "start": 10364,
+                    "end": 10446,
+                    "crop": null,
+                    "index": 12
+                },
+                {
+                    "id": "c2e78a5d-f42d-40c6-830c-9f648a0b070b",
+                    "start": 11074,
+                    "end": 11156,
+                    "crop": null,
+                    "index": 13
+                },
+                {
+                    "id": "89349c2e-0c2a-47f5-8d8c-b29458acc6dc",
+                    "start": 11567,
+                    "end": 11649,
+                    "crop": null,
+                    "index": 14
+                },
+                {
+                    "id": "85693ec3-830b-491a-a78a-6ef851aede6a",
+                    "start": 11968,
+                    "end": 12050,
+                    "crop": null,
+                    "index": 15
+                },
+                {
+                    "id": "2c1d278e-3e07-4682-9928-1c22da1e0e5a",
+                    "start": 12647,
+                    "end": 12729,
+                    "crop": null,
+                    "index": 16
+                },
+                {
+                    "id": "deb1bf12-dcee-4825-ae1c-8525684875e8",
+                    "start": 13819,
+                    "end": 13901,
+                    "crop": null,
+                    "index": 17
+                },
+                {
+                    "id": "5c83407f-3893-456c-a992-0674b6ddcb23",
+                    "start": 14189,
+                    "end": 14271,
+                    "crop": null,
+                    "index": 18
+                },
+                {
+                    "id": "b153d2bb-cf05-4bcc-85a5-2ff872e4d9f5",
+                    "start": 14991,
+                    "end": 15073,
+                    "crop": null,
+                    "index": 19
+                },
+                {
+                    "id": "163cebfe-700f-4adf-a879-0ff610dce3ae",
+                    "start": 18261,
+                    "end": 18343,
+                    "crop": null,
+                    "index": 20
+                },
+                {
+                    "id": "56bbd59b-7525-4eaf-bc39-826d48e324e0",
+                    "start": 18600,
+                    "end": 18682,
+                    "crop": null,
+                    "index": 21
+                },
+                {
+                    "id": "3eb2c95e-3eb2-4ba4-98de-00b4ed8dbc3c",
+                    "start": 19957,
+                    "end": 20039,
+                    "crop": null,
+                    "index": 22
+                },
+                {
+                    "id": "3da0acc7-3318-4c99-b3eb-984d98ec130c",
+                    "start": 22826,
+                    "end": 22908,
+                    "crop": null,
+                    "index": 23
+                },
+                {
+                    "id": "1ac56dfc-f1d5-4614-a433-f2a02d1b61f6",
+                    "start": 25170,
+                    "end": 25252,
+                    "crop": null,
+                    "index": 24
+                },
+                {
+                    "id": "b9932a19-0e78-49e5-b409-77dcfd57c77a",
+                    "start": 26712,
+                    "end": 26794,
+                    "crop": null,
+                    "index": 25
+                },
+                {
+                    "id": "2d754521-8d30-4ac3-8f55-79ee2b373fbe",
+                    "start": 27206,
+                    "end": 27288,
+                    "crop": null,
+                    "index": 26
+                },
+                {
+                    "id": "978cbf3b-b2ec-444b-8048-80fde687465d",
+                    "start": 28378,
+                    "end": 28460,
+                    "crop": null,
+                    "index": 27
+                },
+                {
+                    "id": "077edf86-6efb-4aea-8fcb-1b2bc32f79c3",
+                    "start": 32296,
+                    "end": 32378,
+                    "crop": null,
+                    "index": 28
+                },
+                {
+                    "id": "1b870bc5-816a-4d36-9fe4-ecc4ce6d988b",
+                    "start": 33005,
+                    "end": 33087,
+                    "crop": null,
+                    "index": 29
+                },
+                {
+                    "id": "943017c6-0f1c-45ca-9b88-b36f01b08396",
+                    "start": 34301,
+                    "end": 34383,
+                    "crop": null,
+                    "index": 30
+                },
+                {
+                    "id": "ed05d09c-c209-4b6b-95b0-0570105db413",
+                    "start": 35072,
+                    "end": 35154,
+                    "crop": null,
+                    "index": 31
+                },
+                {
+                    "id": "0d878576-0015-4702-ba22-2c1a9f256ffa",
+                    "start": 38125,
+                    "end": 38207,
+                    "crop": null,
+                    "index": 32
+                },
+                {
+                    "id": "8825ffba-93d2-4123-b0e1-60716d2d856f",
+                    "start": 39884,
+                    "end": 39966,
+                    "crop": null,
+                    "index": 33
+                }
+            ]
+        },
+        "C:/Users/lovis/Desktop/datablackrooms/converted_16fps\\Backrooms - Informational Video.mp4": {
+            "ranges": [
+                {
+                    "id": "39645c0d-1969-43e1-891e-23c6bf9621d3",
+                    "start": 1383,
+                    "end": 1465,
+                    "crop": null,
+                    "index": 1
+                },
+                {
+                    "id": "5caa3302-6833-498b-80f3-efa884e6b6af",
+                    "start": 1525,
+                    "end": 1607,
+                    "crop": null,
+                    "index": 2
+                },
+                {
+                    "id": "6d4332e7-5ad5-444e-9a4a-058ca2201d29",
+                    "start": 1827,
+                    "end": 1909,
+                    "crop": null,
+                    "index": 3
+                },
+                {
+                    "id": "8954672b-4df6-4788-8581-67244915f327",
+                    "start": 1915,
+                    "end": 1997,
+                    "crop": null,
+                    "index": 4
+                },
+                {
+                    "id": "6fdf7295-ee1c-4258-8907-b505d7a9ee03",
+                    "start": 2145,
+                    "end": 2227,
+                    "crop": null,
+                    "index": 5
+                },
+                {
+                    "id": "bcf06da1-87f7-4018-83ca-4c1026bb5699",
+                    "start": 3835,
+                    "end": 3917,
+                    "crop": null,
+                    "index": 6
+                },
+                {
+                    "id": "3e3bfa86-6bc4-4ad8-a3c3-a30740a74a88",
+                    "start": 4889,
+                    "end": 4971,
+                    "crop": null,
+                    "index": 7
+                },
+                {
+                    "id": "5c10f4df-f92a-4bd1-8568-546642bbb1f2",
+                    "start": 4987,
+                    "end": 5069,
+                    "crop": null,
+                    "index": 8
+                },
+                {
+                    "id": "a2d57ff8-1934-4aad-b3a4-4d686e83943f",
+                    "start": 5322,
+                    "end": 5404,
+                    "crop": null,
+                    "index": 9
+                },
+                {
+                    "id": "c84815bf-fb15-4912-9d28-80318ef05b0e",
+                    "start": 6782,
+                    "end": 6864,
+                    "crop": null,
+                    "index": 10
+                },
+                {
+                    "id": "3e6e9765-22fb-4971-b6dc-8dc327d40f8c",
+                    "start": 6941,
+                    "end": 7023,
+                    "crop": null,
+                    "index": 11
+                },
+                {
+                    "id": "8b042319-3828-4465-ae76-453377f98219",
+                    "start": 7155,
+                    "end": 7237,
+                    "crop": null,
+                    "index": 12
+                }
+            ]
+        },
+        "C:/Users/lovis/Desktop/datablackrooms/converted_16fps\\Backrooms - Lighting and Tile Survey.mp4": {
+            "ranges": [
+                {
+                    "id": "23ed3cca-034a-41cb-9fd4-26a033b39fb7",
+                    "start": 126,
+                    "end": 208,
+                    "crop": null,
+                    "index": 1
+                },
+                {
+                    "id": "84e4c9a4-fbb4-4677-bc3d-b72d4383bf14",
+                    "start": 460,
+                    "end": 542,
+                    "crop": null,
+                    "index": 2
+                },
+                {
+                    "id": "f2ba9e5f-7e6e-401a-a5d8-ede48dfed731",
+                    "start": 771,
+                    "end": 853,
+                    "crop": null,
+                    "index": 3
+                },
+                {
+                    "id": "d02fd3ab-785e-47f8-8a60-42afdff605d9",
+                    "start": 1237,
+                    "end": 1319,
+                    "crop": null,
+                    "index": 4
+                },
+                {
+                    "id": "491c1bfa-c30a-4ded-b43e-61e76ce77ebc",
+                    "start": 1668,
+                    "end": 1750,
+                    "crop": null,
+                    "index": 5
+                },
+                {
+                    "id": "82117737-a8d8-4560-8e79-488293e96fa6",
+                    "start": 2355,
+                    "end": 2437,
+                    "crop": null,
+                    "index": 6
+                }
+            ]
+        },
+        "C:/Users/lovis/Desktop/datablackrooms/converted_16fps\\Backrooms - Missing Persons.mp4": {
+            "ranges": [
+                {
+                    "id": "49cfc1db-2730-4da7-863d-86b6e46929e7",
+                    "start": 885,
+                    "end": 967,
+                    "crop": null,
+                    "index": 1
+                },
+                {
+                    "id": "5e63ac06-d6d9-472f-8fb7-86a2d3f91cc6",
+                    "start": 1014,
+                    "end": 1096,
+                    "crop": null,
+                    "index": 2
+                },
+                {
+                    "id": "d64c1955-49ae-4552-bd1b-7b4304fdd146",
+                    "start": 1525,
+                    "end": 1607,
+                    "crop": null,
+                    "index": 3
+                },
+                {
+                    "id": "30e35f8d-1231-4cf6-b67c-d05440db8383",
+                    "start": 2040,
+                    "end": 2122,
+                    "crop": null,
+                    "index": 4
+                },
+                {
+                    "id": "481b4c28-2477-4cda-9c67-c69d0014b149",
+                    "start": 2215,
+                    "end": 2297,
+                    "crop": null,
+                    "index": 5
+                }
+            ]
+        },
+        "C:/Users/lovis/Desktop/datablackrooms/converted_16fps\\Backrooms - Motion Detected.mp4": {
+            "ranges": [
+                {
+                    "id": "b93c267e-74f2-42ed-b089-590c505485b0",
+                    "start": 304,
+                    "end": 386,
+                    "crop": null,
+                    "index": 1
+                },
+                {
+                    "id": "7bc0ee2f-d7b9-42ba-bb59-93335209fad0",
+                    "start": 1482,
+                    "end": 1564,
+                    "crop": null,
+                    "index": 2
+                },
+                {
+                    "id": "3fb35c97-0dd2-4cdd-a5db-df056f96171c",
+                    "start": 1888,
+                    "end": 1970,
+                    "crop": null,
+                    "index": 3
+                },
+                {
+                    "id": "6c6f6208-f31f-4218-b6cd-bb13f106370f",
+                    "start": 3522,
+                    "end": 3604,
+                    "crop": null,
+                    "index": 4
+                }
+            ]
+        },
+        "C:/Users/lovis/Desktop/datablackrooms/converted_16fps\\Backrooms - Overflow.mp4": {
+            "ranges": [
+                {
+                    "id": "03958ed7-b5c5-4799-8c4e-8e75f13aa981",
+                    "start": 311,
+                    "end": 393,
+                    "crop": null,
+                    "index": 1
+                },
+                {
+                    "id": "8ea9d9d8-84f7-4394-99ca-930965c58cad",
+                    "start": 449,
+                    "end": 531,
+                    "crop": null,
+                    "index": 2
+                },
+                {
+                    "id": "e1cc113e-e45a-4a00-9f99-532d4baeec1c",
+                    "start": 678,
+                    "end": 760,
+                    "crop": null,
+                    "index": 3
+                },
+                {
+                    "id": "334e89cf-d7d9-426d-9b0f-4bf8af507e0f",
+                    "start": 1118,
+                    "end": 1200,
+                    "crop": null,
+                    "index": 4
+                }
+            ]
+        },
+        "C:/Users/lovis/Desktop/datablackrooms/converted_16fps\\Backrooms - Pitfalls.mp4": {
+            "ranges": [
+                {
+                    "id": "f9858b50-47b9-4343-b3c6-9d6d7561c579",
+                    "start": 270,
+                    "end": 352,
+                    "crop": null,
+                    "index": 1
+                },
+                {
+                    "id": "0cb4a777-9c37-4d73-9655-1eddf2cf4629",
+                    "start": 540,
+                    "end": 622,
+                    "crop": null,
+                    "index": 2
+                },
+                {
+                    "id": "97e35939-5ef6-458f-a213-e8007b64695d",
+                    "start": 732,
+                    "end": 814,
+                    "crop": null,
+                    "index": 3
+                },
+                {
+                    "id": "59db0fa6-a6be-464a-b793-dde721a635f5",
+                    "start": 1175,
+                    "end": 1257,
+                    "crop": null,
+                    "index": 4
+                },
+                {
+                    "id": "425ad37d-fee9-4838-becd-525ed9280f8c",
+                    "start": 1580,
+                    "end": 1662,
+                    "crop": null,
+                    "index": 5
+                },
+                {
+                    "id": "123ab5d5-9dcf-4a68-9244-d082b724437d",
+                    "start": 2139,
+                    "end": 2221,
+                    "crop": null,
+                    "index": 6
+                },
+                {
+                    "id": "8dd845b5-9e6a-4d44-94ed-f684cb3e3475",
+                    "start": 3478,
+                    "end": 3560,
+                    "crop": null,
+                    "index": 7
+                },
+                {
+                    "id": "b8ba0244-5a0d-4505-99ca-6b1adb03c12c",
+                    "start": 3931,
+                    "end": 4013,
+                    "crop": null,
+                    "index": 8
+                },
+                {
+                    "id": "b33943f2-1733-451c-a366-e5a5dd8ff34d",
+                    "start": 4075,
+                    "end": 4157,
+                    "crop": null,
+                    "index": 9
+                },
+                {
+                    "id": "05cd524a-95fc-4399-a2e7-24272f93cf72",
+                    "start": 4548,
+                    "end": 4630,
+                    "crop": null,
+                    "index": 10
+                },
+                {
+                    "id": "805cfa94-4958-44b9-97a4-9525bc191c00",
+                    "start": 6426,
+                    "end": 6508,
+                    "crop": null,
+                    "index": 11
+                },
+                {
+                    "id": "94053c08-fa61-48f1-af75-af140d3b1b34",
+                    "start": 7158,
+                    "end": 7240,
+                    "crop": null,
+                    "index": 12
+                },
+                {
+                    "id": "3d13a59d-8355-477c-82c9-b5cc86ed4023",
+                    "start": 7544,
+                    "end": 7626,
+                    "crop": null,
+                    "index": 13
+                },
+                {
+                    "id": "3ad8bd9b-f921-424b-ac06-ed557ebd429f",
+                    "start": 7756,
+                    "end": 7838,
+                    "crop": null,
+                    "index": 14
+                },
+                {
+                    "id": "4a4f93ee-1ef9-416b-8579-d9fccdf85b5a",
+                    "start": 8440,
+                    "end": 8522,
+                    "crop": null,
+                    "index": 15
+                },
+                {
+                    "id": "f3fcd8fe-3db2-44cd-82cc-f3a5b209f802",
+                    "start": 8883,
+                    "end": 8965,
+                    "crop": null,
+                    "index": 16
+                },
+                {
+                    "id": "284ce5df-9dd0-4873-89ee-c8ebabdc67a4",
+                    "start": 9490,
+                    "end": 9572,
+                    "crop": null,
+                    "index": 17
+                },
+                {
+                    "id": "64c4bc85-288e-439c-ba2c-4dc33cbd71e2",
+                    "start": 10097,
+                    "end": 10179,
+                    "crop": null,
+                    "index": 18
+                },
+                {
+                    "id": "89d8961a-fa97-4c2e-bca2-ac6ad4bbe752",
+                    "start": 10694,
+                    "end": 10776,
+                    "crop": null,
+                    "index": 19
+                },
+                {
+                    "id": "435e5376-23ca-46e3-a543-a791c1a4b236",
+                    "start": 11253,
+                    "end": 11335,
+                    "crop": null,
+                    "index": 20
+                },
+                {
+                    "id": "174cbb4a-a36c-4e4c-a90f-e8d78e8d7721",
+                    "start": 12053,
+                    "end": 12135,
+                    "crop": null,
+                    "index": 21
+                }
+            ]
+        },
+        "C:/Users/lovis/Desktop/datablackrooms/converted_16fps\\Backrooms - Presentation.mp4": {
+            "ranges": [
+                {
+                    "id": "3d3fb44c-e32a-43f5-b91a-cf7de4cb0d2c",
+                    "start": 1969,
+                    "end": 2051,
+                    "crop": null,
+                    "index": 1
+                },
+                {
+                    "id": "db5b711b-0a70-4cb5-8f9d-a5b4b0f3964d",
+                    "start": 2703,
+                    "end": 2785,
+                    "crop": null,
+                    "index": 2
+                },
+                {
+                    "id": "cc8fdf45-04d3-46f7-9e22-173bae60ebd6",
+                    "start": 4054,
+                    "end": 4136,
+                    "crop": null,
+                    "index": 3
+                },
+                {
+                    "id": "e9ccfc10-e565-4f23-b426-5c7469435091",
+                    "start": 4129,
+                    "end": 4211,
+                    "crop": null,
+                    "index": 4
+                },
+                {
+                    "id": "ad2d8d4c-40ef-4f85-88d8-905018cf8f0c",
+                    "start": 4262,
+                    "end": 4344,
+                    "crop": null,
+                    "index": 5
+                },
+                {
+                    "id": "80e2307c-605e-4b6d-98a9-a6038558b483",
+                    "start": 4782,
+                    "end": 4864,
+                    "crop": null,
+                    "index": 6
+                },
+                {
+                    "id": "b9b416c7-b26c-4d8a-a131-0bc84a1515a6",
+                    "start": 5296,
+                    "end": 5378,
+                    "crop": null,
+                    "index": 7
+                },
+                {
+                    "id": "85c2e105-914f-4c00-a575-d44c76c9c4f0",
+                    "start": 6526,
+                    "end": 6608,
+                    "crop": null,
+                    "index": 8
+                },
+                {
+                    "id": "537b9423-07fa-45cd-bc59-d40568b38874",
+                    "start": 6728,
+                    "end": 6810,
+                    "crop": null,
+                    "index": 9
+                },
+                {
+                    "id": "47de5d1a-1719-4341-b6ed-23d444bc1002",
+                    "start": 7427,
+                    "end": 7509,
+                    "crop": null,
+                    "index": 10
+                }
+            ]
+        },
+        "C:/Users/lovis/Desktop/datablackrooms/converted_16fps\\Backrooms - Prototype.mp4": {
+            "ranges": [
+                {
+                    "id": "350c42d4-d014-4cc9-bfdc-5356dbe72a67",
+                    "start": 409,
+                    "end": 491,
+                    "crop": null,
+                    "index": 1
+                },
+                {
+                    "id": "de4dbed4-2a71-487a-a796-251c72850307",
+                    "start": 889,
+                    "end": 971,
+                    "crop": null,
+                    "index": 2
+                },
+                {
+                    "id": "5574d9c1-4319-4713-889f-a3dd88403a90",
+                    "start": 1036,
+                    "end": 1118,
+                    "crop": null,
+                    "index": 3
+                }
+            ]
+        },
+        "C:/Users/lovis/Desktop/datablackrooms/converted_16fps\\Backrooms - Report.mp4": {
+            "ranges": [
+                {
+                    "id": "95203fd5-4f7d-4021-ba41-452c18451877",
+                    "start": 1008,
+                    "end": 1090,
+                    "crop": null,
+                    "index": 1
+                },
+                {
+                    "id": "7573aa84-5914-4b5b-8e20-e00568e32c34",
+                    "start": 3205,
+                    "end": 3287,
+                    "crop": null,
+                    "index": 2
+                },
+                {
+                    "id": "24e6bf74-8949-40fa-90c5-57b495384d66",
+                    "start": 5633,
+                    "end": 5715,
+                    "crop": null,
+                    "index": 3
+                },
+                {
+                    "id": "f9c7fd3d-4c23-4b32-a3f8-a8c50f0ea974",
+                    "start": 5820,
+                    "end": 5902,
+                    "crop": null,
+                    "index": 4
+                }
+            ]
+        },
+        "C:/Users/lovis/Desktop/datablackrooms/converted_16fps\\Backrooms - Reunion.mp4": {
+            "ranges": [
+                {
+                    "id": "ca7bd861-a08b-4d7d-96b0-1699061b3f18",
+                    "start": 994,
+                    "end": 1076,
+                    "crop": null,
+                    "index": 1
+                },
+                {
+                    "id": "a471e7b5-46b7-456b-b11a-f29f56934db0",
+                    "start": 1618,
+                    "end": 1700,
+                    "crop": null,
+                    "index": 2
+                },
+                {
+                    "id": "9f65f1e5-7412-4586-89fe-80a742e40a3c",
+                    "start": 2774,
+                    "end": 2856,
+                    "crop": null,
+                    "index": 3
+                },
+                {
+                    "id": "836d9518-4b19-4f0f-81bd-25755bf38ea8",
+                    "start": 5097,
+                    "end": 5179,
+                    "crop": null,
+                    "index": 4
+                },
+                {
+                    "id": "ef2381eb-9f3f-4af8-a798-b3de74d85f5c",
+                    "start": 10952,
+                    "end": 11034,
+                    "crop": null,
+                    "index": 5
+                },
+                {
+                    "id": "42ebe421-a466-4d2a-92e1-37ac3f6ffe70",
+                    "start": 11178,
+                    "end": 11260,
+                    "crop": null,
+                    "index": 6
+                }
+            ]
+        },
+        "C:/Users/lovis/Desktop/datablackrooms/converted_16fps\\Backrooms - Static Dead End.mp4": {
+            "ranges": [
+                {
+                    "id": "220e0283-9c3e-4638-9fca-e72775fee3bb",
+                    "start": 1444,
+                    "end": 1526,
+                    "crop": null,
+                    "index": 1
+                },
+                {
+                    "id": "ff600c66-c6ec-4249-bf0b-1532017fb061",
+                    "start": 1899,
+                    "end": 1981,
+                    "crop": null,
+                    "index": 2
+                },
+                {
+                    "id": "dfabd009-9f95-4c46-9476-da0d674d4d1b",
+                    "start": 3412,
+                    "end": 3494,
+                    "crop": null,
+                    "index": 3
+                }
+            ]
+        },
+        "C:/Users/lovis/Desktop/datablackrooms/converted_16fps\\Backrooms - The Third Test.mp4": {
+            "ranges": [
+                {
+                    "id": "3f515974-8eb0-4f8c-bda9-311c9ca790b8",
+                    "start": 1137,
+                    "end": 1219,
+                    "crop": null,
+                    "index": 1
+                },
+                {
+                    "id": "cfd996b1-fdb4-42bb-bb45-70bbc2339eea",
+                    "start": 1305,
+                    "end": 1387,
+                    "crop": null,
+                    "index": 2
+                },
+                {
+                    "id": "d49f37a4-a31f-41f3-8193-5fd1b1091cfc",
+                    "start": 1431,
+                    "end": 1513,
+                    "crop": null,
+                    "index": 3
+                },
+                {
+                    "id": "925e133d-7d0f-4071-bf99-dc9afe9dd8a2",
+                    "start": 328,
+                    "end": 410,
+                    "crop": [
+                        48,
+                        49,
+                        321,
+                        243
+                    ],
+                    "index": 4
+                }
+            ]
+        }
+    },
+    "longest_edge": 1024
+}

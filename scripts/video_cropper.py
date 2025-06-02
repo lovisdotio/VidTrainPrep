@@ -36,12 +36,15 @@ class VideoCropper(QWidget):
 
         # Crop related (mostly unchanged, but context changes)
         self.current_rect = None
-        self.longest_edge = 1024
         self.cap = None
         self.frame_count = 0
         self.original_width = 0
         self.original_height = 0
-        self.clip_aspect_ratio = 1.0
+        self.clip_aspect_ratio = 1.0 # This might be redundant with scene.aspect_ratio
+
+        # New attributes for fixed resolution mode
+        self.fixed_export_width = None
+        self.fixed_export_height = None
 
         # Playback state (mostly unchanged)
         self.is_playing = False
@@ -61,7 +64,7 @@ class VideoCropper(QWidget):
         # UI widgets (some changes)
         self.video_list = QListWidget() # Main list of videos/duplicates
 
-        # Aspect ratio options (unchanged)
+        # Aspect ratio options with added WAN format
         self.aspect_ratios = {
             "Free-form": None, "1:1 (Square)": 1.0, "4:3 (Standard)": 4/3,
             "16:9 (Widescreen)": 16/9, "9:16 (Vertical Video)": 9/16,
@@ -108,10 +111,6 @@ class VideoCropper(QWidget):
         # self.video_list.itemChanged.connect(self.loader.update_list_item_color) # Keep this
         left_panel.addWidget(self.video_list, 1) # More vertical space
 
-        # self.duplicate_button = QPushButton("Duplicate Video Entry") # REMOVED - Obsolete with ranges
-        # self.duplicate_button.clicked.connect(self.loader.duplicate_clip)
-        # left_panel.addWidget(self.duplicate_button)
-        
         # --- Clip Range Management Panel ---
         range_group_box = QWidget() # Use a QWidget for layout within the panel
         range_layout = QVBoxLayout(range_group_box)
@@ -222,6 +221,7 @@ class VideoCropper(QWidget):
             self.aspect_ratio_combo.addItem(ratio_name)
         self.aspect_ratio_combo.currentTextChanged.connect(self.set_aspect_ratio)
         aspect_ratio_layout.addWidget(self.aspect_ratio_combo)
+        
         right_panel.addLayout(aspect_ratio_layout)
         
         self.graphics_view = CustomGraphicsView()
@@ -235,12 +235,56 @@ class VideoCropper(QWidget):
         self.graphics_view.setMouseTracking(True)
         right_panel.addWidget(self.graphics_view, 1)
         
+        # --- Resolution and Aspect Ratio Controls ---
+        resolution_aspect_group = QWidget()
+        resolution_aspect_layout = QFormLayout(resolution_aspect_group)
+        resolution_aspect_layout.setContentsMargins(0,5,0,5)
+
+        # Connect aspect ratio combo here, as it's part of this group
+        current_aspect_ratio_layout = QHBoxLayout()
+        current_aspect_ratio_layout.addWidget(QLabel("Aspect Ratio:"))
+        # self.aspect_ratio_combo is already initialized and items added.
+        current_aspect_ratio_layout.addWidget(self.aspect_ratio_combo)
+        resolution_aspect_layout.addRow(current_aspect_ratio_layout)
+        
+        # Fixed Resolution Mode UI Elements
+        fixed_res_label = QLabel("Fixed Resolution Mode:")
+        resolution_aspect_layout.addRow(fixed_res_label)
+
+        fixed_res_inputs_layout = QHBoxLayout()
+        self.fixed_width_input = QLineEdit()
+        self.fixed_width_input.setPlaceholderText("Width")
+        self.fixed_width_input.setValidator(QIntValidator(1, 7680, self))
+        fixed_res_inputs_layout.addWidget(self.fixed_width_input)
+        fixed_res_inputs_layout.addWidget(QLabel("x"))
+        self.fixed_height_input = QLineEdit()
+        self.fixed_height_input.setPlaceholderText("Height")
+        self.fixed_height_input.setValidator(QIntValidator(1, 7680, self))
+        fixed_res_inputs_layout.addWidget(self.fixed_height_input)
+        resolution_aspect_layout.addRow(fixed_res_inputs_layout) # Add QHBoxLayout to QFormLayout row
+
+        fixed_res_buttons_layout = QHBoxLayout()
+        self.apply_fixed_res_button = QPushButton("Apply Fixed Res")
+        fixed_res_buttons_layout.addWidget(self.apply_fixed_res_button)
+        self.clear_fixed_res_button = QPushButton("Clear Fixed Res")
+        fixed_res_buttons_layout.addWidget(self.clear_fixed_res_button)
+        resolution_aspect_layout.addRow(fixed_res_buttons_layout) # Add QHBoxLayout to QFormLayout row
+        
+        self.fixed_res_status_label = QLabel("Fixed resolution: Deactivated")
+        resolution_aspect_layout.addRow(self.fixed_res_status_label)
+
+        right_panel.addWidget(resolution_aspect_group) # Add the whole group to the right panel
+        
         self.slider = QSlider(Qt.Orientation.Horizontal)
         self.slider.setEnabled(False)
         self.slider.sliderMoved.connect(self.editor.scrub_video)
         self.slider.valueChanged.connect(self.editor.scrub_video)
         right_panel.addWidget(self.slider)
         
+        # Connect fixed resolution buttons here as they are part of right_panel
+        self.apply_fixed_res_button.clicked.connect(lambda: self.toggle_fixed_resolution_mode(True))
+        self.clear_fixed_res_button.clicked.connect(lambda: self.toggle_fixed_resolution_mode(False))
+
         self.clip_length_label = QLabel("Clip Length: 0 frames | Video Length: 0 frames") # Show clip and total length
         right_panel.addWidget(self.clip_length_label)
         
@@ -293,12 +337,6 @@ class VideoCropper(QWidget):
         export_options_layout = QFormLayout(export_options_group)
         export_options_layout.setContentsMargins(0, 10, 0, 5) # Add some top margin
 
-        # Resolution
-        self.resolution_input = QLineEdit() # Keep this one
-        self.resolution_input.setPlaceholderText("Longest Edge (e.g., 1024, Optional)")
-        self.resolution_input.textChanged.connect(self.set_longest_edge)
-        export_options_layout.addRow("Output Res (Max Edge):", self.resolution_input)
-
         # Filename Prefix
         self.prefix_input = QLineEdit()
         self.prefix_input.setPlaceholderText("Replace original name (Optional)")
@@ -329,36 +367,34 @@ class VideoCropper(QWidget):
 
         right_panel.addWidget(export_options_group)
 
-        # Captions (Keep as is)
-        # self.caption_input = QLineEdit() # REMOVED
-        # self.caption_input.setPlaceholderText("Simple caption (Optional)") # REMOVED
-        # self.caption_input.textChanged.connect(lambda text: setattr(self, "simple_caption", text)) # REMOVED
-        # right_panel.addWidget(self.caption_input) # REMOVED
-        # self.gemini_api_key_input = QLineEdit() # MOVED
-        # self.gemini_api_key_input.setPlaceholderText("Enter Gemini API Key Here") # MOVED
-        # self.gemini_api_key_input.setEchoMode(QLineEdit.EchoMode.Password) # MOVED
-        # right_panel.addWidget(self.gemini_api_key_input) # MOVED
-        # self.gemini_caption_checkbox = QCheckBox("Generate Gemini Caption/Description") # MOVED
-        # self.gemini_caption_checkbox.setChecked(False) # MOVED
-        # # self.gemini_caption_checkbox.stateChanged.connect(self.toggle_image_export_based_on_gemini) # Connection removed previously
-        # right_panel.addWidget(self.gemini_caption_checkbox) # MOVED
-
         self.submit_button = QPushButton("Export Selected Video(s)") # Text updated
         self.submit_button.clicked.connect(self.exporter.export_videos) # export_videos needs update
         right_panel.addWidget(self.submit_button)
+        
+        # Nouveau bouton pour exporter l'image de la frame courante
+        self.export_range_start_frames_button = QPushButton("Exporter 1ère Frame des Ranges (Images)")
+        self.export_range_start_frames_button.clicked.connect(self.trigger_export_range_start_frames)
+        right_panel.addWidget(self.export_range_start_frames_button)
         
         main_layout.addLayout(right_panel, 3)
     
     def set_aspect_ratio(self, ratio_name):
         ratio_value = self.aspect_ratios.get(ratio_name)
-        self.scene.set_aspect_ratio(ratio_value)
+        # This is the primary way aspect ratio is set on the scene from UI (combobox)
+        # If fixed mode is active, this combobox should be disabled.
+        if self.fixed_export_width is None: # Only apply if not in fixed mode
+            if ratio_name == "Original": # Special handling for "Original"
+                if self.original_width > 0 and self.original_height > 0:
+                    original_ratio = self.original_width / self.original_height
+                    self.scene.set_aspect_ratio(original_ratio)
+                else:
+                    self.scene.set_aspect_ratio(None) # No video, no original ratio yet
+            else:
+                self.scene.set_aspect_ratio(ratio_value) # This can be float or None for Free-form
+        # If fixed mode IS active, and this is somehow called, the scene's aspect ratio
+        # should already be correctly set by toggle_fixed_resolution_mode.
+        # No need for an else block to re-assert, as the combobox is disabled.
     
-    def set_longest_edge(self):
-        try:
-            self.longest_edge = int(self.resolution_input.text())
-        except ValueError:
-            self.longest_edge = 1080
-
     def clear_crop_region_controller(self):
         """
         Remove all interactive crop region items from the scene.
@@ -394,14 +430,23 @@ class VideoCropper(QWidget):
             return
 
         # --- Calculate Crop Data (relative to original video) ---
-        scale_w = self.original_width / pixmap.width()
-        scale_h = self.original_height / pixmap.height()
+        print(f"[DEBUG crop_rect_finalized] Received rect from scene: x={rect.x():.2f}, y={rect.y():.2f}, w={rect.width():.2f}, h={rect.height():.2f}")
+        print(f"[DEBUG crop_rect_finalized] VideoCropper original_width: {self.original_width}, original_height: {self.original_height}")
+        print(f"[DEBUG crop_rect_finalized] Current pixmap_item.pixmap() dimensions: {pixmap.width()}x{pixmap.height()}")
+
+        scale_w = self.original_width / pixmap.width() if pixmap.width() > 0 else 1.0
+        scale_h = self.original_height / pixmap.height() if pixmap.height() > 0 else 1.0
+        print(f"[DEBUG crop_rect_finalized] Calculated scale_w: {scale_w:.4f}, scale_h: {scale_h:.4f}")
+
         x = int(rect.x() * scale_w)
         y = int(rect.y() * scale_h)
         w = int(rect.width() * scale_w)
         h = int(rect.height() * scale_h)
         
         # Validate coordinates
+        crop_tuple_before_validation = (x, y, w, h)
+        print(f"[DEBUG crop_rect_finalized] Crop tuple before validation: {crop_tuple_before_validation}")
+
         if x<0 or y<0 or w<=0 or h<=0 or x+w > self.original_width or y+h > self.original_height:
              print(f"⚠️ Invalid crop coordinates calculated: ({x},{y},{w},{h}). Clamping/adjusting might be needed.")
              x = max(0, x)
@@ -414,6 +459,7 @@ class VideoCropper(QWidget):
                  return
                  
         crop_tuple = (x, y, w, h)
+        print(f"[DEBUG crop_rect_finalized] Final crop_tuple for storage: {crop_tuple}")
         
         # --- Apply Crop to Selected Range OR Create New Range ---
         if self.current_selected_range_id:
@@ -972,6 +1018,90 @@ class VideoCropper(QWidget):
             print("Invalid frame number entered.")
             # Optionally clear the input or show a brief message
             self.goto_frame_input.clear()
+
+    def toggle_fixed_resolution_mode(self, enable):
+        if enable:
+            try:
+                width_str = self.fixed_width_input.text()
+                height_str = self.fixed_height_input.text()
+                if not width_str or not height_str:
+                    QMessageBox.warning(self, "Input Error", "Please enter both width and height for fixed resolution.")
+                    self.fixed_res_status_label.setText("Fixed resolution: Invalid input")
+                    return
+
+                width = int(width_str)
+                height = int(height_str)
+
+                if width <= 0 or height <= 0:
+                    QMessageBox.warning(self, "Input Error", "Width and Height must be positive values.")
+                    self.fixed_res_status_label.setText("Fixed resolution: Invalid W/H")
+                    return
+                
+                self.fixed_export_width = width
+                self.fixed_export_height = height
+                
+                self.aspect_ratio_combo.setEnabled(False)
+                # self.longest_edge_input_field.setEnabled(False) # REMOVED
+                
+                fixed_ratio = width / height
+                self.scene.set_aspect_ratio(fixed_ratio)
+
+                # Visually update the aspect ratio combo to something that reflects the mode if possible
+                # This is tricky because the ratio might be custom. "Free-form" is a safe bet.
+                # Or find a matching one. For now, let's leave it or set to Free-form.
+                free_form_text = "Free-form"
+                if free_form_text in self.aspect_ratios:
+                     # Temporarily block signals to prevent on_aspect_ratio_changed from firing
+                    self.aspect_ratio_combo.blockSignals(True)
+                    self.aspect_ratio_combo.setCurrentText(free_form_text)
+                    self.aspect_ratio_combo.blockSignals(False)
+                
+                self.fixed_res_status_label.setText(f"Fixed resolution: {width}x{height} (Active)")
+                print(f"Fixed resolution mode enabled: {width}x{height}")
+
+            except ValueError:
+                QMessageBox.warning(self, "Input Error", "Invalid number format for width or height.")
+                self.fixed_res_status_label.setText("Fixed resolution: Format Error")
+                # Don't automatically call toggle_fixed_resolution_mode(False) here to avoid recursion on bad input
+                # User needs to correct or clear.
+        else: # Disable fixed resolution mode
+            self.fixed_export_width = None
+            self.fixed_export_height = None
+            
+            self.aspect_ratio_combo.setEnabled(True)
+            # self.longest_edge_input_field.setEnabled(True) # REMOVED
+            
+            # Optionally clear the fixed width/height input fields
+            # self.fixed_width_input.clear()
+            # self.fixed_height_input.clear()
+
+            # Restore aspect ratio from the (now enabled) combobox
+            current_combo_selection = self.aspect_ratio_combo.currentText()
+            self.on_aspect_ratio_changed(current_combo_selection) 
+            
+            self.fixed_res_status_label.setText("Fixed resolution: Deactivated")
+            print("Fixed resolution mode disabled.")
+
+    def trigger_export_range_start_frames(self):
+        """
+        Déclenche l'export de la première frame de chaque range des vidéos sélectionnées.
+        """
+        # print(f"[DEBUG VideoCropper] Current frame number from attribute: {getattr(self, 'current_frame_number', 'N/A')}")
+        # frame_to_export = 0 # Default
+        # if hasattr(self, 'slider'):
+        #     frame_to_export = self.slider.value()
+        #     print(f"[DEBUG VideoCropper] Current frame from slider: {frame_to_export}")
+        # else:
+        #     print("[DEBUG VideoCropper] Slider not found.")
+            
+        # is_mode_image_active = getattr(self, 'is_image_mode', False) # Ce flag n'est plus pertinent ici
+
+        if hasattr(self, 'exporter'):
+            # Indiquer à l'exporter de traiter les ranges des vidéos sélectionnées
+            # La méthode de l'exporter s'occupera de trouver les start_frames, etc.
+            self.exporter.export_first_frames_of_ranges_as_images()
+        else:
+            QMessageBox.warning(self, "Erreur", "Composant d'exportation non initialisé.")
 
 # --- FPS Conversion Dialog --- 
 class ConvertFpsDialog(QDialog):
